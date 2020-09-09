@@ -1,14 +1,16 @@
-{% load static %}
+{%load static%}
+
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie8" lang="en"><![endif]-->
-<!--[if IE 9 ]><html class="ie9" lang="en"><![endif]-->
-<!--[if (gte IE 10)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><!--<![endif]-->
-<head>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+
+
 	<title>Middle East Oil</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<!-- Seo Meta -->
-		<meta name="description" content="Here's What Instagram Ads Will Look Like">
+		<meta name="description" content="iPress - Responsive News/Blog/Magazine HTML5 Template">
 		<meta name="keywords" content="iPress, magazine, light, dark, themeforest, multi purpose, premium, unlimited, blog, news, AD, optimized">
 
 	<!-- Styles -->
@@ -18,62 +20,70 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css'%}" media="screen" />
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
 
+
+
+
+
 	<!-- Favicon -->
 		<link rel="shortcut icon" href="{% static 'images/favicon.ico'%}">
 		<link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png'%}">
+		<link rel="stylesheet" href="{% static 'slide.css'%}">
 
-	<!--[if IE]>
-		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EmulateIE8; IE=EDGE" />
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="{% static 'break/breaking-news-ticker.min.css'%}">
+
+
 </head>
+
+
+
+
 <body>
 	<div id="layout" class="boxed">
 		<header id="header">
-			<div class="a_head">
-				<div class="row clearfix">
-					<div class="breaking_news lefter">
-						<div class="freq_out">
-							<div class="freq"><div class="inner_f"></div><div id="layerBall"></div></div>
-						</div><!-- /freq -->
-						<ul id="js-news" class="js-hidden">
-							<li class="news-item"><a href="#">Improving Search on the Envato Marketplaces: 2013 in Review</a></li>
-							<li class="news-item"><a href="#">4 Ways To Find Free and Unique Photos for Your Next Website Theme</a></li>
-							<li class="news-item"><a href="#">Community Poll: Internet Speeds From Around the World in 2013</a></li>
-							<li class="news-item"><a href="#">New Hub, Header & Collections: 10 Ways to Improve Your Marketplaces Productivity</a></li>
-							<li class="news-item"><a href="#">Get a Free Year of Tuts+ Premium by Trying New Relic</a></li>
-							<li class="news-item"><a href="#">Beyond Bland: 10+ Creative Packaging Designs That Will Leave You Inspired</a></li>
-						</ul><!-- /js news -->
-					</div><!-- /breaking news -->
 
-					<div class="right_bar">
-						<div class="lang">
-							<a class="activated_lang" href="#"><img src="images/flag/us.png" alt="EN"></a>
-							<div class="more_lang">
-								<a href="#"><img src="images/flag/gr.png" alt=""></a>
-								<a href="#"><img src="images/flag/fr.png" alt=""></a>
-							</div><!-- /more lang -->
-						</div><!-- /lang -->
+			<div class="section-container">
+				<div class="demo-box">
 
-						<div class="social social_head">
-							<a href="#" class="bottomtip" title="Twitter"><i class="fa-twitter"></i></a>
-							<a href="#" class="bottomtip" title="Facebook"><i class="fa-facebook"></i></a>
-							<a href="#" class="bottomtip" title="Google Plus"><i class="fa-google-plus"></i></a>
-							<a href="#" class="bottomtip" title="Linkedin"><i class="fa-linkedin"></i></a>
-							<a href="#" class="bottomtip" title="Github"><i class="fa-github"></i></a>
-							<a href="#" class="bottomtip" title="instagram"><i class="fa-instagram"></i></a>
-							<a href="#" class="bottomtip" title="Dribbble"><i class="fa-dribbble"></i></a>
-						</div><!-- /social -->
+					<!-- DEMO5 HTML STARTS HERE -->
+					<!-- *********************** -->
+					<div class="bn-breaking-news" id="newsTicker5">
+						<div class="bn-label" id="uu">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							 BRAEKING NEWS <div class="bn-label">  Date:{% now "jS F Y H:i" %}
 
-						<span id="date_time"></span><!-- /date -->
-					</div><!-- /right bar -->
-				</div><!-- /row -->
-			</div><!-- /a head -->
+						</div>   </div>
+							<div class="bn-news">
+									{% for post in posts %}
+								<ul>
+										<li><a href="{% url 'latestpost' post.id %}">{{post.title}}</a></li>
+								</ul>
+								{% endfor %}
+							</div>
+							<div class="bn-controls">
+								<button><span class="bn-arrow bn-prev"></span></button>
+								<button><span class="bn-action"></span></button>
+								<button><span class="bn-arrow bn-next"></span></button>
+							</div>
+						</div>
+						<!-- *********************** -->
+						<!-- DEMO5 HTML END HERE ** -->
+
+				</div>
+			</div>
+
+
+
+
+
 
 			<div class="b_head">
 				<div class="row clearfix">
 					<div class="logo">
-						<a href="{% url 'index'%}" title="Middle East Oil"><img src="{% static 'images/logo.png'%}" alt=""></a>
+						<a href="{% url 'index' %}" title=""><img src="{% static 'images/logo.png'%}" alt="iPress - Responsive News/Blog/Magazine HTML5"></a>
 					</div><!-- /logo -->
 
 
@@ -88,8 +98,10 @@
 								<li class="current colordefault home_class"><a href="{% url 'index'%}"><i class="icon-home"></i></a>
 
 								</li>
+								<li class="color1"><a href="#"><i class="fa-reorder"></i></a>
 
-								<li class="color2"><a href="{% url 'gas'%}">Gas&Oil</a>
+								</li>
+								<li class="color2"><a href="{% url 'gas' %}">Gas&Oil</a>
 									<ul class="col4 mega">
 
 									</ul>
@@ -118,7 +130,7 @@
 								<div class="search_icon"><i class="fa-search"></i></div>
 								<div class="s_form">
 									<form action="search_result.html" id="search" method="get">
-										<input id="inputhead" name="search" type="text" onfocus="if (this.value=='Start Searching...') this.value = '';" onblur="if (this.value=='') this.value = 'Start Searching...';" value="Start Searching..." placeholder="Start Searching ...">
+										<input id="inputhead" name="search" type="text" onFocus="if (this.value=='Start Searching...') this.value = '';" onBlur="if (this.value=='') this.value = 'Start Searching...';" value="Start Searching..." placeholder="Start Searching ...">
 										<button type="submit"><i class="fa-search"></i></button>
 									</form><!-- /form -->
 								</div><!-- /s form -->
@@ -129,79 +141,117 @@
 			</div><!-- /row -->
 		</header><!-- /header -->
 
+
+
+
 		<div class="page-content">
 			<div class="row clearfix">
 				<div class="grid_9 alpha">
-					<div class="grid_8 alpha posts">
+					<div class="ipress_slider mbf">
+						<div class="slider_a owl-carouseltheme">
+							<!-- /slide -->
 
-						<div class="single_post mbf clearfix">
-							<h3 class="single_title"> <i class="icon-document-edit mi"></i>{{object.title}} </h3>
-							<div class="meta mb">  <a href="#"></a>  {{object.date_posted}}   <a href=""></a> </div>
 
-							<img class="mbt" src="{{object.post_pic.url}}" alt="#">
-							<p>{{object.content|safe}}</p>
-						</div><!-- /single post -->
-
-						<div class="share_post mbf clearfix">
-
-						</div><!-- /share -->
-
-						<div class="author_post mbf clearfix">
-
-							<div class="author_co clearfix">
-
-							</div><!-- /author co -->
-						</div><!-- /author -->
+						</div><!-- /slider -->
+					</div><!-- /slider ipress -->
 
 
 
+						<div class="posts_block mbf clearfix">
+							<div class="title color5">
+								<h4>Technology </h4>
+								<a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
+							</div><!-- /title bar -->
+
+
+							{% for post in gass %}
+
+							<div class="grid_6 alpha">
+								<div class="mb float-shadow"><a href="{% url 'latestpost' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a></div>
+								<div class="post_m_content">
+									<h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
+									<div class="meta mb"> {{post.date_posted}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
+
+								</div><!-- post content -->
+							</div><!-- /grid6 omega -->
+
+							{% endfor %}
+
+
+              {% for post in w %}
+
+              <div class="grid_6 alpha">
+                <div class="mb float-shadow"><a href="{% url 'latestpost' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a></div>
+                <div class="post_m_content">
+                  <h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
+                  <div class="meta mb"> {{post.date_posted}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
+
+                </div><!-- post content -->
+              </div><!-- /grid6 omega -->
+
+              {% endfor %}
+
+
+              {% for post in p %}
+
+              <div class="grid_6 alpha">
+                <div class="mb float-shadow"><a href="{% url 'latestpost' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a></div>
+                <div class="post_m_content">
+                  <h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
+                  <div class="meta mb"> {{post.date_posted}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
+
+                </div><!-- post content -->
+              </div><!-- /grid6 omega -->
+
+              {% endfor %}
+
+
+              {% for post in x %}
+
+              <div class="grid_6 alpha">
+                <div class="mb float-shadow"><a href="{% url 'latestpost' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a></div>
+                <div class="post_m_content">
+                  <h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
+                  <div class="meta mb"> {{post.date_posted}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
+
+                </div><!-- post content -->
+              </div><!-- /grid6 omega -->
+
+              {% endfor %}
+
+
+              {% for post in y %}
+
+              <div class="grid_6 alpha">
+                <div class="mb float-shadow"><a href="{% url 'latestpost' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a></div>
+                <div class="post_m_content">
+                  <h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
+                  <div class="meta mb"> {{post.date_posted}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
+
+                </div><!-- post content -->
+              </div><!-- /grid6 omega -->
+
+              {% endfor %}
+
+							<div class="grid_6 omega">
+								<div class="small_slider_music owl-carousel owl-theme">
+									<div class="item clearfix">
+										<ul class="small_posts">
+
+										</ul>
+									</div>
+
+								</div><!-- /slides -->
+							</div><!-- grid6 omega -->
+						</div><!-- posts block Music -->
 
 
 
 
-					</div><!-- end grid8 -->
-
-					<div class="grid_4 omega sidebar sidebar_b">
-						<div class="widget">
-							<div class="title"><h4></h4></div>
-
-						</div><!-- widget -->
-
-						<div class="widget">
-						
-						</div><!-- widget -->
 
 
 
-
-
-						<div class="widget">
-
-						</div><!-- widget -->
-
-
-
-					</div><!-- end grid8 -->
-				</div><!-- end grid9 -->
-
-				<div class="grid_3 omega sidebar sidebar_a">
-					<div class="widget">
-						<script type="text/javascript" src="https://www.oil-price.net/COMMODITIES/gen.php?lang=en"> </script>
-						<noscript> To get <a href="http://www.oil-price.net/dashboard.php?lang=en#COMMODITIES">gold, oil and
-							commodity prices</a>, please enable Javascript.</noscript>
-
-									<br><br><br><br>
-							<div class="">
-								<script type="text/javascript" src="https://www.oil-price.net/widgets/brent_crude_price_large/gen.php?lang=en"> </script>
-								<noscript> To get the BRENT <a href="http://www.oil-price.net/dashboard.php?lang=en#brent_crude_price_large">oil price</a>,
-									 please enable Javascript.</noscript>
-
-							</div>
-					</div><!-- widget -->
-
-
-
-
+					</div><!-- end grid9 -->
 
 
 
@@ -311,45 +361,31 @@ Email:	<a href=""></a> </p>
 		<script type="text/javascript" src="{% static 'js/owl.carousel.min.js'%}"></script>
 		<script type="text/javascript" src="{% static 'js/jquery.ticker.js'%}"></script>
 		<script type="text/javascript" src="{% static 'js/custom.js'%}"></script>
+
+
+
+
+		<script src="{% static 'break/jquery-3.3.1.min.js'%}"></script>
+
+		<!-- Highlight.js plugin code-->
+		<script src="{% static 'break/highlight.pack.js'%}"></script>
+
+
 		<script type="text/javascript">
-		/* <![CDATA[ */
 
-			// Disqus
-			var disqus_shortname = 'officialtemplate';
-			(function () {
-				var s = document.createElement('script'); s.async = true;
-				s.type = 'text/javascript';
-				s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-				(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-			}());
+			hljs.initHighlightingOnLoad();
 
-			function date_time(id){
-				date = new Date;
-				year = date.getFullYear();
-				month = date.getMonth();
-				months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
-				d = date.getDate();
-				day = date.getDay();
-				days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
-				h = date.getHours();
-				if(h<10){
-					h = "0"+h;}
-					m = date.getMinutes();
-					if(m<10){
-						m = "0"+m;
-					}
-					s = date.getSeconds();
-					if(s<10){
-						s = "0"+s;
-					}
-				// result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m+':'+s;
-				result = ''+days[day]+' '+d+' '+months[month]+' '+year;
-				document.getElementById(id).innerHTML = result;
-				setTimeout('date_time("'+id+'");','1000');
-				return true;
-			}
-			window.onload = date_time('date_time');
-		/* ]]> */
+			$(document).ready(function(){
+
+				$('#newsTicker5').breakingNews({
+					effect: 'typography'
+				});
+
+			});
+
 		</script>
+
+
+
 </body>
 </html>

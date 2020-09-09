@@ -25,7 +25,8 @@ def Gas(request):
     p =Criptocurrency.objects.order_by('-date_posted').filter(category=category)
     x =Technology.objects.order_by('-date_posted').filter(category=category)
     y =Post_of_the_day.objects.order_by('-date_posted').filter(category=category)
-    context={'gass':gass,'w':w,'p':p,'x':x,'y':y}
+    posts = LatestPost.objects.all().order_by('-date_posted')
+    context={'gass':gass,'w':w,'p':p,'x':x,'y':y,'posts':posts}
     return render(request, 'base/gas.html',context)
 
 
@@ -36,8 +37,9 @@ def Cripto(request):
     p =Criptocurrency.objects.order_by('-date_posted').filter(category=category)
     x =Technology.objects.order_by('-date_posted').filter(category=category)
     y =Post_of_the_day.objects.order_by('-date_posted').filter(category=category)
-    context={'gass':gass,'w':w,'p':p,'x':x,'y':y}
-    return render(request, 'base/gas.html',context)
+    posts = LatestPost.objects.all().order_by('-date_posted')
+    context={'gass':gass,'w':w,'p':p,'x':x,'y':y,'posts':posts}
+    return render(request, 'base/cripto.html',context)
 
 
 def Tech(request):
@@ -47,8 +49,9 @@ def Tech(request):
     p =Criptocurrency.objects.order_by('-date_posted').filter(category=category)
     x =Technology.objects.order_by('-date_posted').filter(category=category)
     y =Post_of_the_day.objects.order_by('-date_posted').filter(category=category)
-    context={'gass':gass,'w':w,'p':p,'x':x,'y':y}
-    return render(request, 'base/gas.html',context)
+    posts = LatestPost.objects.all().order_by('-date_posted')
+    context={'gass':gass,'w':w,'p':p,'x':x,'y':y,'posts':posts}
+    return render(request, 'base/tech.html',context)
 
 class LatestPostt(DetailView):
     model = LatestPost

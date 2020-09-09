@@ -24,25 +24,13 @@
 
 
 
-	<!-- Favicon -->
 		<link rel="shortcut icon" href="{% static 'images/favicon.ico'%}">
 		<link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png'%}">
 		<link rel="stylesheet" href="{% static 'slide.css'%}">
 
 
-		<link rel="stylesheet" type="text/css" href="{% static 'demo-page-styles.css'%}">
-			<link rel="stylesheet" type="text/css" href="{% static 'breaking-news-ticker.min.css'%}">
-		  <script src="{% static 'jquery-3.3.1.min.js'%}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'break/breaking-news-ticker.min.css'%}">
 
-			<!-- Highlight.js plugin code-->
-			<script src="{% static 'highlight.pack.js'%}"></script>
-
-	<!--[if IE]>
-		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EmulateIE8; IE=EDGE" />
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-
-
-		<![endif]-->
 
 
 </head>
@@ -54,46 +42,59 @@
 	<div id="layout" class="boxed">
 		<header id="header">
 
-			<section class="demo-section-box">
-<div class="section-container">
-<div class="demo-box">
 
 
-			<div class="bn-breaking-news" id="newsTicker5">
-          <div class="bn-label" id="uu">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-             BRAEKING NEWS <div class="bn-label">  Date:{% now "jS F Y H:i" %}
+			<div class="section-container">
+				<div class="demo-box">
 
-          </div>   </div>
+					<!-- DEMO5 HTML STARTS HERE -->
+					<!-- *********************** -->
+					<div class="bn-breaking-news" id="newsTicker5">
+						<div class="bn-label" id="uu">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							 BRAEKING NEWS <div class="bn-label">  Date:{% now "jS F Y H:i" %}
 
-          <div class="bn-news">
+						</div>   </div>
+				    	<div class="bn-news">
+								  {% for post in posts %}
+				    		<ul>
+				    			  <li><a href="{% url 'latestpost' post.id %}">{{post.title}}</a></li>
+				    		</ul>
+								{% endfor %}
+				    	</div>
+				    	<div class="bn-controls">
+				    		<button><span class="bn-arrow bn-prev"></span></button>
+				    		<button><span class="bn-action"></span></button>
+				    		<button><span class="bn-arrow bn-next"></span></button>
+				    	</div>
+				    </div>
+				    <!-- *********************** -->
+				    <!-- DEMO5 HTML END HERE ** -->
 
-            <ul>
-              <li><a href="">hhhhhh</a></li>
-
-							<li>hello</li>
-								<li>hello</li>
-
-            </ul>
-
-          </div>
-          <div class="bn-controls">
-            <button><span class="bn-arrow bn-prev"></span></button>
-            <button><span class="bn-action"></span></button>
-            <button><span class="bn-arrow bn-next"></span></button>
-          </div>
-        </div>
+				</div>
+			</div>
 
 
-			</div><!-- /a head -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 			<div class="b_head">
 				<div class="row clearfix">
 					<div class="logo">
-						<a href="{% url 'index' %}" title="iPress - Responsive News/Blog/Magazine HTML5"><img src="{% static 'images/logo.png'%}" alt="iPress - Responsive News/Blog/Magazine HTML5"></a>
+						<a href="{% url 'index' %}" title=""><img src="{% static 'images/logo.png'%}" alt="iPress - Responsive News/Blog/Magazine HTML5"></a>
 					</div><!-- /logo -->
 
 
@@ -319,19 +320,19 @@
 									<div class="item clearfix">
 										<ul class="small_posts">
 											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb11.jpg'%}" alt="#"></a>
-												<h3><a href="single_post.html">What worst could be the worst?</a></h3>
-												<div class="meta mb"> 5 hours ago    /    <a href="single_post.html">1 comments</a> </div>
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb11.jpg'%}" alt="#"></a>
+												<h3><a href="#">What worst could be the worst?</a></h3>
+												<div class="meta mb"> 5 hours ago    /    <a href="#">1 comments</a> </div>
 											</li>
 											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb12.jpg'%}" alt="#"></a>
-												<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 1 days ago    /    <a href="single_post.html">5 comments</a> </div>
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb12.jpg'%}" alt="#"></a>
+												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+												<div class="meta mb"> 1 days ago    /    <a href="#">5 comments</a> </div>
 											</li>
 											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb6.jpg'%}" alt="#"></a>
-												<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 4 days ago    /    <a href="single_post.html">5 comments</a> </div>
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb6.jpg'%}" alt="#"></a>
+												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+												<div class="meta mb"> 4 days ago    /    <a href="#">5 comments</a> </div>
 											</li>
 										</ul>
 									</div>
@@ -362,43 +363,43 @@
 									<div class="item clearfix">
 										<ul class="small_posts">
 											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb2.jpg'%}" alt="#"></a>
-												<h3><a href="single_post.html">What worst could be the worst?</a></h3>
-												<div class="meta mb"> 5 hours ago    /    <a href="single_post.html">1 comments</a> </div>
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb2.jpg'%}" alt="#"></a>
+												<h3><a href="#">What worst could be the worst?</a></h3>
+												<div class="meta mb"> 5 hours ago    /    <a href="#">1 comments</a> </div>
 											</li>
 											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb8.jpg'%}" alt="#"></a>
-												<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 1 days ago    /    <a href="single_post.html">5 comments</a> </div>
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb8.jpg'%}" alt="#"></a>
+												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+												<div class="meta mb"> 1 days ago    /    <a href="#">5 comments</a> </div>
 											</li>
 											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb1.jpg'%}" alt="#"></a>
-												<h3><a href="single_post.html">Paul Thomson on post with SoundCloud</a></h3>
-												<div class="meta mb"> 3 days ago    /    <a href="single_post.html">14 comments</a> </div>
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb1.jpg'%}" alt="#"></a>
+												<h3><a href="#">Paul Thomson on post with SoundCloud</a></h3>
+												<div class="meta mb"> 3 days ago    /    <a href="#">14 comments</a> </div>
 											</li>
 											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb10.jpg'%}" alt="#"></a>
-												<h3><a href="single_post.html">For the days of peace and warmth</a></h3>
-												<div class="meta mb"> 3 days ago    /    <a href="single_post.html">14 comments</a> </div>
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb10.jpg'%}" alt="#"></a>
+												<h3><a href="#">For the days of peace and warmth</a></h3>
+												<div class="meta mb"> 3 days ago    /    <a href="#">14 comments</a> </div>
 											</li>
 										</ul>
 									</div>
 									<div class="item clearfix">
 										<ul class="small_posts">
 											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb4.jpg'%}" alt="#"></a>
-												<h3><a href="single_post.html">What worst could be the worst?</a></h3>
-												<div class="meta mb"> 5 hours ago    /    <a href="single_post.html">1 comments</a> </div>
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb4.jpg'%}" alt="#"></a>
+												<h3><a href="#">What worst could be the worst?</a></h3>
+												<div class="meta mb"> 5 hours ago    /    <a href="#">1 comments</a> </div>
 											</li>
 											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb3.jpg'%}" alt="#"></a>
-												<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 1 days ago    /    <a href="single_post.html">5 comments</a> </div>
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb3.jpg'%}" alt="#"></a>
+												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+												<div class="meta mb"> 1 days ago    /    <a href="#">5 comments</a> </div>
 											</li>
 											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb9.jpg'%}" alt="#"></a>
-												<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 4 days ago    /    <a href="single_post.html">5 comments</a> </div>
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb9.jpg'%}" alt="#"></a>
+												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+												<div class="meta mb"> 4 days ago    /    <a href="#">5 comments</a> </div>
 											</li>
 										</ul>
 									</div>
@@ -414,56 +415,26 @@
 						</div><!-- widget -->
 
 						<div class="widget">
-							<div id="calendar_wrap"><table id="wp-calendar">
-								<caption>January 2014</caption>
-									<thead>
-										<tr>
-											<th scope="col" title="Monday">M</th>
-											<th scope="col" title="Tuesday">T</th>
-											<th scope="col" title="Wednesday">W</th>
-											<th scope="col" title="Thursday">T</th>
-											<th scope="col" title="Friday">F</th>
-											<th scope="col" title="Saturday">S</th>
-											<th scope="col" title="Sunday">S</th>
-										</tr>
-									</thead>
 
-									<tfoot>
-										<tr>
-											<td colspan="3" id="prev"><a href="#" title="View posts for December 2013">« Dec</a></td>
-											<td class="pad">&nbsp;</td>
-											<td colspan="3" id="next" class="pad">&nbsp;</td>
-										</tr>
-									</tfoot>
-
-									<tbody>
-										<tr><td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-										<tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
-										<tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td id="today">18</td><td>19</td></tr>
-										<tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
-										<tr><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td class="pad" colspan="2">&nbsp;</td></tr>
-									</tbody>
-								</table>
-							</div>
 						</div><!-- widget -->
 
 						<div class="widget">
 							<div class="title"><h4>Random Posts</h4></div>
 							<div class="relative float-shadow mb">
-								<a href="single_post.html"><img src="{% static 'images/assets/r_1.jpg'%}" alt=""></a>
+								<a href="#"><img src="{% static 'images/assets/r_1.jpg'%}" alt=""></a>
 								<div class="r_content">
-									<a class="cat color5" href="#" title="View all posts under Music">Music</a>
-									<div class="r_title"><a href="single_post.html">At vero eos et accusamus et iusto</a></div>
+									<a class="cat color5" href="#" title="View all posts under Music">Oil&Gas</a>
+									<div class="r_title"><a href="#">Oil prices are collapsing after Saudi Arabia sends ominous signal</a></div>
 								</div>
 							</div><!-- relative -->
 
 
 
 							<div class="relative float-shadow mb">
-								<a href="single_post.html"><img src="{% static 'images/assets/r_3.jpg'%}" alt=""></a>
+								<a href="#"><img src="{% static 'images/assets/r_3.jpg'%}" alt=""></a>
 								<div class="r_content">
-									<a class="cat color2" href="#" title="View all posts under Travel">Travel</a>
-									<div class="r_title"><a href="single_post.html">Bairro Alto in Lisboa, Portugal</a></div>
+									<a class="cat color2" href="#" title="View all posts under Travel">Oil&Gas</a>
+									<div class="r_title"><a href="#">COVID-19 Forces Libyan Oil Companies To Halt Operations</a></div>
 								</div>
 							</div><!-- relative -->
 						</div><!-- widget -->
@@ -504,18 +475,17 @@
 
 							</div><!-- /slides -->
 					</div><!-- /widget -->
+    	<div class="widget">
+
+						<script type="text/javascript" src="https://www.gas-cost.net/widget.php?lang=en"> </script>
+						<noscript> To get <a href="http://www.gas-cost.net/dashboard.php?lang=en">gasoline price</a>, please enable Javascript.</noscript>
 
 
 
 
 
-					<div class="widget">
-						<script type="text/javascript" src="https://www.gold-quote.net/widgets/gold-price-estimator/gen.php?lang=en"> </script>
-	<noscript> To get the <a href="http://www.gold-quote.net/widgets/gold-price-estimator">gold price</a>, please enable Javascript.</noscript>
 
 
-	<script type="text/javascript" src="https://www.gas-cost.net/widget.php?lang=en"> </script>
-	<noscript> To get <a href="http://www.gas-cost.net/dashboard.php?lang=en">gasoline price</a>, please enable Javascript.</noscript>
 
 
 				</div><!-- /grid3 sidebar A -->
@@ -526,10 +496,10 @@
 			<div class="row clearfix">
 				<div class="grid_3">
 					<div class="widget">
-						<div class="title"><h4>About iPress</h4></div>
-						<p> iPress is a magazine/blog/ad/review template. Nunc montes odio phasellus dignissim, aenean, nec augue velit integer elementum ut montes quis integer cursus, est purus, lectus duis, scelerisque tincidunt ultricies phasellus elementum turpis tristique.<br><br>
+						<div class="title"><h4>About Middle East Oil</h4></div>
+						<p> Middle East Oil.<br><br>
 
-Email:	<a href="contact.html">information@ipress.com</a> </p>
+Email:	<a href=""></a> </p>
 					</div><!-- /widget -->
 				</div><!-- /grid3 -->
 
@@ -538,19 +508,19 @@ Email:	<a href="contact.html">information@ipress.com</a> </p>
 						<div class="title"><h4>Recent Posts</h4></div>
 						<ul class="small_posts">
 							<li class="clearfix">
-								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb4.jpg'%}" alt="#"></a>
-								<h3><a href="single_post.html">What is the worst could be the worst?</a></h3>
-								<div class="meta mb"> 1 day ago  /  <a href="single_post.html">1 comment</a> </div>
+								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb4.jpg'%}" alt="#"></a>
+								<h3><a href="#">What is the worst could be the worst?</a></h3>
+
 							</li>
 							<li class="clearfix">
-								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb5.jpg'%}" alt="#"></a>
-								<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-								<div class="meta mb"> 3 days ago  /  <a href="single_post.html">3 comments</a> </div>
+								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb5.jpg'%}" alt="#"></a>
+								<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+
 							</li>
 							<li class="clearfix">
-								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb6.jpg'%}" alt="#"></a>
-								<h3><a href="single_post.html">Paul Thomson on post with SoundCloud</a></h3>
-								<div class="meta mb"> 6 days ago  /  <a href="single_post.html">5 comments</a> </div>
+								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb6.jpg'%}" alt="#"></a>
+								<h3><a href="#">Paul Thomson on post with SoundCloud</a></h3>
+
 							</li>
 						</ul>
 					</div><!-- /widget -->
@@ -561,18 +531,18 @@ Email:	<a href="contact.html">information@ipress.com</a> </p>
 						<div class="title"><h4>Best Reviews</h4></div>
 						<ul class="small_posts">
 							<li class="clearfix">
-								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb13.jpg'%}" alt="#"></a>
-								<h3><a href="single_post.html">What is the worst could be the worst?</a></h3>
+								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb13.jpg'%}" alt="#"></a>
+								<h3><a href="#">What is the worst could be the worst?</a></h3>
 								<div class="meta mb"> <a class="cat color1" href="#" title="View all posts under Entertainment">Entertainment</a><span class="post_rating" href="#" title="Rating">8.89</span> </div>
 							</li>
 							<li class="clearfix">
-								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb12.jpg'%}" alt="#"></a>
-								<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb12.jpg'%}" alt="#"></a>
+								<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
 								<div class="meta mb"> <a class="cat color3" href="#" title="View all posts under News">News</a><span class="post_rating" href="#" title="Rating">8.1</span> </div>
 							</li>
 							<li class="clearfix">
-								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="{% static 'images/assets/thumb11.jpg'%}" alt="#"></a>
-								<h3><a href="single_post.html">Paul Thomson on post with SoundCloud</a></h3>
+								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb11.jpg'%}" alt="#"></a>
+								<h3><a href="#">Paul Thomson on post with SoundCloud</a></h3>
 								<div class="meta mb"> <a class="cat color4" href="#" title="View all posts under Sports">Sports</a><span class="post_rating" href="#" title="Rating">7.95</span> </div>
 							</li>
 						</ul>
@@ -627,7 +597,25 @@ Email:	<a href="contact.html">information@ipress.com</a> </p>
 
 
 
+		<script src="{% static 'break/jquery-3.3.1.min.js'%}"></script>
 
+		<!-- Highlight.js plugin code-->
+		<script src="{% static 'break/highlight.pack.js'%}"></script>
+
+
+		<script type="text/javascript">
+
+			hljs.initHighlightingOnLoad();
+
+			$(document).ready(function(){
+
+				$('#newsTicker5').breakingNews({
+					effect: 'typography'
+				});
+
+			});
+
+		</script>
 
 
 </body>
