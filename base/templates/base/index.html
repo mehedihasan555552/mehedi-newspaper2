@@ -43,143 +43,6 @@
 
 
 		<![endif]-->
-<style media="screen">
-#slider-wrapper {
-width: 940px;
-height: 470px;
-margin: 50px auto;
-position: relative;
-margin-bottom: 0px;
-background: rgba(0, 0, 0, 0.5);
-overflow: hidden;
-}
-
-#s1 {
-padding: 6px;
-background: #000000;
-position: absolute;
-left: 50%;
-bottom: 25px;
-margin-left: -36px;
-border-radius: 20px;
-opacity: 0.3;
-cursor: pointer;
-z-index: 999;
-}
-
-#s2 {
-padding: 6px;
-background: #000000;
-position: absolute;
-left: 50%;
-bottom: 25px;
-margin-left: -12px;
-border-radius: 20px;
-opacity: 0.3;
-cursor: pointer;
-z-index: 999;
-}
-
-#s3 {
-padding: 6px;
-background: #000000;
-position: absolute;
-left: 50%;
-bottom: 25px;
-margin-left: 12px;
-border-radius: 20px;
-opacity: 0.3;
-cursor: pointer;
-z-index: 999;
-}
-
-#s4 {
-padding: 6px;
-background: #000000;
-position: absolute;
-left: 50%;
-bottom: 25px;
-margin-left: 36px;
-border-radius: 20px;
-opacity: 0.3;
-cursor: pointer;
-z-index: 999;
-}
-
-#s1:hover,
-#s2:hover,
-#s3:hover,
-#s4:hover {
-opacity: .50;
-}
-
-.inner-wrapper {
-width: 940px;
-height: 470px;
-position: absolute;
-top: 0;
-left: 0;
-margin-bottom: 0px;
-overflow: hidden;
-}
-
-.control {
-display: none;
-}
-
-#Slide1:checked ~ .overflow-wrapper {
-margin-left: 0%;
-}
-
-#Slide2:checked ~ .overflow-wrapper {
-margin-left: -100%;
-}
-
-#Slide3:checked ~ .overflow-wrapper {
-margin-left: -200%;
-}
-
-#Slide4:checked ~ .overflow-wrapper {
-margin-left: -300%;
-}
-
-#Slide1:checked + #s1 {
-opacity: 1;
-}
-
-#Slide2:checked + #s2 {
-opacity: 1;
-}
-
-#Slide3:checked + #s3 {
-opacity: 1;
-}
-
-#Slide4:checked + #s4 {
-opacity: 1;
-}
-
-.overflow-wrapper {
-width: 400%;
-height: 100%;
-position: absolute;
-top: 0;
-left: 0;
-overflow-y: hidden;
-z-index: 1;
--webkit-transition: all 0.3s ease-in-out;
--moz-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
-}
-
-.slide img {
-width: 25%;
-float: left;
-}
-
-
-</style>
 
 
 </head>
@@ -230,7 +93,7 @@ float: left;
 			<div class="b_head">
 				<div class="row clearfix">
 					<div class="logo">
-						<a href="{% url 'index' %}" title="iPress - Responsive News/Blog/Magazine HTML5"><img src="{% static 'images/logo.svg'%}" alt="iPress - Responsive News/Blog/Magazine HTML5"></a>
+						<a href="{% url 'index' %}" title="iPress - Responsive News/Blog/Magazine HTML5"><img src="{% static 'images/logo.png'%}" alt="iPress - Responsive News/Blog/Magazine HTML5"></a>
 					</div><!-- /logo -->
 
 
@@ -242,30 +105,28 @@ float: left;
 					<div class="c_head clearfix">
 						<nav>
 							<ul class="sf-menu">
-								<li class="current colordefault home_class"><a href="index.html"><i class="icon-home"></i></a>
+								<li class="current colordefault home_class"><a href="{% url 'index'%}"><i class="icon-home"></i></a>
 
 								</li>
-								<li class="color1"><a href="#"><i class="fa-reorder"></i></a>
 
-								</li>
-								<li class="color2"><a href="category.html">Gas&Oil</a>
+								<li class="color2"><a href="{% url 'gas'%}">Gas&Oil</a>
 									<ul class="col4 mega">
 
 									</ul>
 								</li>
-								<li class="color3"><a href="category.html">Criptocurrency</a>
+								<li class="color3"><a href="{% url 'cripto'%}">Criptocurrency</a>
 									<ul class="col4 mega">
 
 									</ul>
 								</li>
-								<li class="color4"><a href="category.html">Currency</a>
+								<li class="color4"><a href="{% url 'cripto'%}">Currency</a>
 									<ul class="col4 mega">
 
 
 									</ul>
 								</li>
-								<li class="color5"><a href="category.html">Alternationveenergy</a></li>
-								<li class="color6"><a href="category.html">Technology</a></li>
+
+								<li class="color6"><a href="{% url 'tech'%}">Technology</a></li>
 
 							</ul><!-- /menu -->
 						</nav><!-- /nav -->
@@ -288,26 +149,6 @@ float: left;
 			</div><!-- /row -->
 		</header><!-- /header -->
 
-
-
-		<div id="slider-wrapper">
- <div class="inner-wrapper">
-	 <input checked type="radio" name="slide" class="control" id="Slide1" />
-	 <label for="Slide1" id="s1"></label>
-	 <input type="radio" name="slide" class="control" id="Slide2" />
-	 <label for="Slide2" id="s2"></label>
-	 <input type="radio" name="slide" class="control" id="Slide3" />
-	 <label for="Slide3" id="s3"></label>
-	 <input type="radio" name="slide" class="control" id="Slide4" />
-	 <label for="Slide4" id="s4"></label>
-	 <div class="overflow-wrapper">
-		 {% for post in posts %}
-		 <a class="slide" href="{% url 'latestpost' post.id %}"><img src="{{post.post_pic.url}}" /><h1></a>
-		 {% endfor %}
-
-	 </div>
- </div>
-</div>
 
 
 

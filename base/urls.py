@@ -12,6 +12,9 @@ urlpatterns = [
     path('postoftheday/<int:pk>/', PostofthedayPostt.as_view(), name='postof'),
     path('header1/<int:pk>/', Header1Postt.as_view(), name='header1'),
     path('header2/<int:pk>/', Header2Postt.as_view(), name='header2'),
+    path('gas/', views.Gas, name='gas'),
+    path('cripto/', views.Cripto, name='cripto'),
+    path('tech/', views.Tech, name='tech'),
 
 
 

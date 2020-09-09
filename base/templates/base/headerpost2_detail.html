@@ -73,7 +73,7 @@
 			<div class="b_head">
 				<div class="row clearfix">
 					<div class="logo">
-						<a href="{% url 'index'%}" title="Middle East Oil"><img src="{% static 'images/logo.svg'%}" alt=""></a>
+						<a href="{% url 'index'%}" title="Middle East Oil"><img src="{% static 'images/logo.png'%}" alt=""></a>
 					</div><!-- /logo -->
 
 
@@ -85,27 +85,29 @@
 					<div class="c_head clearfix">
 						<nav>
 							<ul class="sf-menu">
-								<li class="colordefault home_class"><a href="index.html"><i class="icon-home"></i></a>
+								<li class="current colordefault home_class"><a href="{% url 'index'%}"><i class="icon-home"></i></a>
 
 								</li>
-								<li class="current color1"><a href="#"><i class="fa-reorder"></i></a>
-									<ul>
+
+								<li class="color2"><a href="{% url 'gas'%}">Gas&Oil</a>
+									<ul class="col4 mega">
 
 									</ul>
 								</li>
-								<li class="color2"><a href="category.html">Travel</a>
+								<li class="color3"><a href="{% url 'cripto'%}">Criptocurrency</a>
+									<ul class="col4 mega">
 
+									</ul>
 								</li>
-								<li class="color3"><a href="category.html">People</a>
+								<li class="color4"><a href="{% url 'cripto'%}">Currency</a>
+									<ul class="col4 mega">
 
-								</li>
-								<li class="color4"><a href="category.html">Sports</a>
 
+									</ul>
 								</li>
-								<li class="color5"><a href="category.html">Music</a></li>
-								<li class="color6"><a href="category.html">TV</a></li>
-								<li class="color7"><a href="category.html">Entertainment</a></li>
-								<li class="color8"><a href="contact.html">Contact</a></li>
+
+								<li class="color6"><a href="{% url 'tech'%}">Technology</a></li>
+
 							</ul><!-- /menu -->
 						</nav><!-- /nav -->
 
