@@ -25,7 +25,7 @@ SECRET_KEY = 'x)#*l4+xlk39j8l-*0vitqj^=00z##to8%2-i0!7!=j!+%8#z_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','middleeastoil.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','middleeastoil.herokuapp.com','*']
 
 
 # Application definition
