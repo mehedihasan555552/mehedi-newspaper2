@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -79,10 +79,15 @@ WSGI_APPLICATION = 'Newspaper.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'def6b3qfdncss6',
+        'HOST':'ec2-34-238-26-109.compute-1.amazonaws.com',
+        'PORT':'5432',
+        'USER': 'yzvjahjhwahufj',
+        'PASSWORD': '1a11ca39975ba5b669ce02c3a2094c97c05ba77ddcf3ff3e9fbf1659387f60d8'
     }
 }
+
 
 
 # Password validation
@@ -107,6 +112,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -122,14 +130,14 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/images/'
 
 STATICFILES_DIRS =[
-   os.path.join(BASE_DIR,'media')
+   os.path.join(BASE_DIR,'static')
 ]
 
-MEDIA_ROOT= os.path.join(BASE_DIR,'media/images')
+MEDIA_ROOT= os.path.join(BASE_DIR,'static/images')

@@ -1,4 +1,5 @@
 {%load static%}
+{% load embed_video_tags %}
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -168,7 +169,7 @@
 										<span class="post_rating" href="#" title="Rating"><i class="fa fa-star"></i> 9.11</span>
 										<h3><a href="{% url 'postof' post.id %}">{{ post.title }}</a></h3>
 									</div>
-									<a href="{% url 'postof' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a>
+									<a href="{% url 'postof' post.id %}"><img style="width:600px;height:400px;" src="{{post.post_pic.url}}" alt=""></a>
 								</div><!-- /half -->
 
 								   {% endfor %}
@@ -182,7 +183,7 @@
 
 										<h3><a href="{% url 'header1' post.id %}">{{post.title}}</a></h3>
 									</div>
-									<a href="{% url 'header1' post.id %}"><img src="{{post.post_pic.url}}" width="600" height="250" alt=""></a>
+									<a href="{% url 'header1' post.id %}"><img style="width:500px;height:200px;"src="{{post.post_pic.url}}"  alt=""></a>
 								</div><!-- /half -->
 
 						     {% endfor %}
@@ -194,7 +195,7 @@
 
 										<h3><a href="{% url 'header2' post.id %}">{{post.title}}</a></h3>
 									</div>
-									<a href="{% url 'header2' post.id %}"><img src="{{post.post_pic.url}}" width="600" height="250" alt="" class="hhh"></a>
+									<a href="{% url 'header2' post.id %}"><img style="width:500px;height:200px;" src="{{post.post_pic.url}}"  alt="" class="hhh"></a>
 								</div><!-- /half -->
 								 {% endfor %}
 							</div><!-- /slide -->
@@ -204,23 +205,18 @@
 
 					<div class="grid_8 omega posts righter">
 						<div class="post_day mbf clearfix">
-							<div class="title colordefault"><h4>Post Of The Day</h4></div>
 
 
-                   {% for post in postoftheday %}
+
+
 							<div class="grid_6 alpha relative">
-								<a class="cat" href="{% url 'postof' post.id %}" title="View all posts under Travel">{{post.category}}</a>
-								<a class="float-shadow" href="{% url 'postof' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a>
+
 							</div><!-- /grid6 alpha -->
 
 							<div class="grid_6 omega">
-								<div class="post_day_content">
-									<h3> <a href="{% url 'postof' post.id %}">{{post.title}}</a> </h3>
-									<div class="meta mb"> {{post.date_posted}}     <a href="{% url 'postof' post.id %}"></a> </div>
 
-								</div><!-- /post content -->
 
-								{% endfor %}
+
 							</div><!-- /grid6 omega -->
 						</div><!-- /post day -->
 
@@ -340,6 +336,118 @@
 							</div><!-- grid6 omega -->
 						</div><!-- posts block Travel -->
 
+
+
+
+
+						<div class="posts_block mbf clearfix">
+							<div class="title color1">
+								<h4>Currency</h4>
+								<a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
+							</div>
+
+								{% for post in currency %}
+
+							<div class="grid_6 alpha">
+								<div class="mb float-shadow"><a href="{% url 'currency' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a></div>
+								<div class="post_m_content">
+									<h3> <a href="{% url 'currency' post.id %}">{{post.title}}</a> </h3>
+									<div class="meta mb"> {{post.date_posted}}   <a href="{% url 'currency' post.id %}"></a> </div>
+
+								</div><!-- post content -->
+							</div><!-- grid6 omega -->
+
+								{% endfor %}
+
+							<div class="grid_6 omega">
+								<div class="small_slider_travel owl-carousel owl-theme">
+									<div class="item clearfix">
+										<ul class="small_posts">
+
+										</ul>
+									</div>
+									<div class="item clearfix">
+										<ul class="small_posts">
+											<li class="clearfix">
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb11.jpg'%}" alt="#"></a>
+												<h3><a href="#">What worst could be the worst?</a></h3>
+												<div class="meta mb"> 5 hours ago    /    <a href="#">1 comments</a> </div>
+											</li>
+											<li class="clearfix">
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb12.jpg'%}" alt="#"></a>
+												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+												<div class="meta mb"> 1 days ago    /    <a href="#">5 comments</a> </div>
+											</li>
+											<li class="clearfix">
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb6.jpg'%}" alt="#"></a>
+												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+												<div class="meta mb"> 4 days ago    /    <a href="#">5 comments</a> </div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div><!-- grid6 omega -->
+						</div><!-- posts block Travel -->
+
+
+
+
+
+						<div class="posts_block mbf clearfix">
+							<div class="title color1">
+								<h4>MEO Channel</h4>
+								<a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
+							</div>
+
+								{% for post in video %}
+
+							<div class="grid_6 alpha">
+								<div class="">
+								{% video post.video '100% x 50%' %}
+
+								</div>
+								<div class="post_m_content">
+									<h3> <a href="">{{post.title}}</a> </h3>
+									<div class="meta mb"> {{post.date_posted}}   <a href=""></a> </div>
+
+								</div><!-- post content -->
+							</div><!-- grid6 omega -->
+
+								{% endfor %}
+
+							<div class="grid_6 omega">
+								<div class="small_slider_travel owl-carousel owl-theme">
+									<div class="item clearfix">
+										<ul class="small_posts">
+
+										</ul>
+									</div>
+									<div class="item clearfix">
+										<ul class="small_posts">
+											<li class="clearfix">
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb11.jpg'%}" alt="#"></a>
+												<h3><a href="#">What worst could be the worst?</a></h3>
+												<div class="meta mb"> 5 hours ago    /    <a href="#">1 comments</a> </div>
+											</li>
+											<li class="clearfix">
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb12.jpg'%}" alt="#"></a>
+												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+												<div class="meta mb"> 1 days ago    /    <a href="#">5 comments</a> </div>
+											</li>
+											<li class="clearfix">
+												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb6.jpg'%}" alt="#"></a>
+												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+												<div class="meta mb"> 4 days ago    /    <a href="#">5 comments</a> </div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div><!-- grid6 omega -->
+						</div><!-- posts block Travel -->
+
+
+
+
 						<div class="posts_block mbf clearfix">
 							<div class="title color3">
 								<h4>Technology</h4>
@@ -449,8 +557,13 @@
 					</div><!-- end grid9 -->
 				</div><!-- end grid9 -->
 
+
+
 				<div class="grid_3 omega sidebar sidebar_a">
 					<div class="block__content">
+						<div class="widget">
+							<div class="title"><h4>Oil Price</h4></div>
+						</div>
 						<script type="text/javascript" src="https://www.oil-price.net/COMMODITIES/gen.php?lang=en"> </script>
 						<noscript> To get <a href="http://www.oil-price.net/dashboard.php?lang=en#COMMODITIES">gold, oil and
 							commodity prices</a>, please enable Javascript.</noscript>

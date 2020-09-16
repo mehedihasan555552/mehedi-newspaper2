@@ -15,6 +15,7 @@ admin.site.register(Post_of_the_day,PostAdmin)
 admin.site.register(GasAndOil,PostAdmin)
 admin.site.register(Criptocurrency,PostAdmin)
 admin.site.register(Technology,PostAdmin)
-
+admin.site.register(Currency,PostAdmin)
 admin.site.register(HeaderPost1,PostAdmin)
 admin.site.register(HeaderPost2,PostAdmin)
+admin.site.register(MEOCHANNEL)

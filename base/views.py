@@ -9,11 +9,13 @@ def index(request):
     postoftheday=Post_of_the_day.objects.all()
     music=GasAndOil.objects.all().order_by('-date_posted')
     cripto = Criptocurrency.objects.all().order_by('-date_posted')
+    currency = Currency.objects.all().order_by('-date_posted')
     tech = Technology.objects.all().order_by('-date_posted')
     header1 =HeaderPost1.objects.all().order_by('-date_posted')
     header2 = HeaderPost2.objects.all().order_by('-date_posted')
+    video = MEOCHANNEL.objects.all()
     context={'posts':posts,'postoftheday':postoftheday,'music':music,
-    'cripto':cripto,'tech':tech,'header1':header1,'header2':header2,
+    'cripto':cripto,'tech':tech,'header1':header1,'header2':header2,'currency':currency,'video':video
     }
     return render(request, 'base/index.html',context)
 
@@ -63,6 +65,13 @@ class GasAndoilPostt(DetailView):
 
 class CriptocurrencyPostt(DetailView):
     model = Criptocurrency
+
+
+class MeoPostt(DetailView):
+    model = MEOCHANNEL
+
+class CurrencyPostt(DetailView):
+    model = Currency
 
 class TechPostt(DetailView):
     model = Technology
