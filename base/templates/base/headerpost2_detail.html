@@ -1,0 +1,354 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="en"><![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><!--<![endif]-->
+<head>
+	<title>Middle East Oil</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<!-- Seo Meta -->
+		<meta name="description" content="Here's What Instagram Ads Will Look Like">
+		<meta name="keywords" content="iPress, magazine, light, dark, themeforest, multi purpose, premium, unlimited, blog, news, AD, optimized">
+
+	<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="{% static 'style.css'%}" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/icons.css'%}" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/animate.css'%}" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css'%}" media="screen" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
+
+	<!-- Favicon -->
+		<link rel="shortcut icon" href="{% static 'images/favicon.ico'%}">
+		<link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png'%}">
+
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EmulateIE8; IE=EDGE" />
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="layout" class="boxed">
+		<header id="header">
+			<div class="a_head">
+				<div class="row clearfix">
+					<div class="breaking_news lefter">
+						<div class="freq_out">
+							<div class="freq"><div class="inner_f"></div><div id="layerBall"></div></div>
+						</div><!-- /freq -->
+						<ul id="js-news" class="js-hidden">
+							<li class="news-item"><a href="#">Improving Search on the Envato Marketplaces: 2013 in Review</a></li>
+							<li class="news-item"><a href="#">4 Ways To Find Free and Unique Photos for Your Next Website Theme</a></li>
+							<li class="news-item"><a href="#">Community Poll: Internet Speeds From Around the World in 2013</a></li>
+							<li class="news-item"><a href="#">New Hub, Header & Collections: 10 Ways to Improve Your Marketplaces Productivity</a></li>
+							<li class="news-item"><a href="#">Get a Free Year of Tuts+ Premium by Trying New Relic</a></li>
+							<li class="news-item"><a href="#">Beyond Bland: 10+ Creative Packaging Designs That Will Leave You Inspired</a></li>
+						</ul><!-- /js news -->
+					</div><!-- /breaking news -->
+
+					<div class="right_bar">
+						<div class="lang">
+							<a class="activated_lang" href="#"><img src="images/flag/us.png" alt="EN"></a>
+							<div class="more_lang">
+								<a href="#"><img src="images/flag/gr.png" alt=""></a>
+								<a href="#"><img src="images/flag/fr.png" alt=""></a>
+							</div><!-- /more lang -->
+						</div><!-- /lang -->
+
+						<div class="social social_head">
+							<a href="#" class="bottomtip" title="Twitter"><i class="fa-twitter"></i></a>
+							<a href="#" class="bottomtip" title="Facebook"><i class="fa-facebook"></i></a>
+							<a href="#" class="bottomtip" title="Google Plus"><i class="fa-google-plus"></i></a>
+							<a href="#" class="bottomtip" title="Linkedin"><i class="fa-linkedin"></i></a>
+							<a href="#" class="bottomtip" title="Github"><i class="fa-github"></i></a>
+							<a href="#" class="bottomtip" title="instagram"><i class="fa-instagram"></i></a>
+							<a href="#" class="bottomtip" title="Dribbble"><i class="fa-dribbble"></i></a>
+						</div><!-- /social -->
+
+						<span id="date_time"></span><!-- /date -->
+					</div><!-- /right bar -->
+				</div><!-- /row -->
+			</div><!-- /a head -->
+
+			<div class="b_head">
+				<div class="row clearfix">
+					<div class="logo">
+						<a href="{% url 'index'%}" title="Middle East Oil"><img src="{% static 'images/logo.png'%}" alt=""></a>
+					</div><!-- /logo -->
+
+
+				</div><!-- /row -->
+			</div><!-- /b head -->
+
+			<div class="row clearfix">
+				<div class="sticky_true">
+					<div class="c_head clearfix">
+						<nav>
+							<ul class="sf-menu">
+								<li class="current colordefault home_class"><a href="{% url 'index'%}"><i class="icon-home"></i></a>
+
+								</li>
+
+								<li class="color2"><a href="{% url 'gas'%}">Gas&Oil</a>
+									<ul class="col4 mega">
+
+									</ul>
+								</li>
+								<li class="color3"><a href="{% url 'cripto'%}">Criptocurrency</a>
+									<ul class="col4 mega">
+
+									</ul>
+								</li>
+								<li class="color4"><a href="{% url 'cripto'%}">Currency</a>
+									<ul class="col4 mega">
+
+
+									</ul>
+								</li>
+
+								<li class="color6"><a href="{% url 'tech'%}">Technology</a></li>
+
+							</ul><!-- /menu -->
+						</nav><!-- /nav -->
+
+						<div class="right_icons">
+							<a class="random_post bottomtip" href="#" title="Random Post"><i class="icon-media-shuffle"></i></a><!-- /random post -->
+
+							<div class="search">
+								<div class="search_icon"><i class="fa-search"></i></div>
+								<div class="s_form">
+									<form action="search_result.html" id="search" method="get">
+										<input id="inputhead" name="search" type="text" onfocus="if (this.value=='Start Searching...') this.value = '';" onblur="if (this.value=='') this.value = 'Start Searching...';" value="Start Searching..." placeholder="Start Searching ...">
+										<button type="submit"><i class="fa-search"></i></button>
+									</form><!-- /form -->
+								</div><!-- /s form -->
+							</div><!-- /search -->
+						</div><!-- /right icons -->
+					</div><!-- /c head -->
+				</div><!-- /sticky -->
+			</div><!-- /row -->
+		</header><!-- /header -->
+
+		<div class="page-content">
+			<div class="row clearfix">
+				<div class="grid_9 alpha">
+					<div class="grid_8 alpha posts">
+
+						<div class="single_post mbf clearfix">
+							<h3 class="single_title"> <i class="icon-document-edit mi"></i>{{object.title}} </h3>
+							<div class="meta mb">  <a href="#"></a>  {{object.date_posted}}   <a href=""></a> </div>
+
+							<img class="mbt" src="{{object.post_pic.url}}" alt="#">
+							<p>{{object.content|safe}}</p>
+						</div><!-- /single post -->
+
+						<div class="share_post mbf clearfix">
+
+						</div><!-- /share -->
+
+						<div class="author_post mbf clearfix">
+
+							<div class="author_co clearfix">
+
+							</div><!-- /author co -->
+						</div><!-- /author -->
+
+
+
+
+
+
+
+					</div><!-- end grid8 -->
+
+					<div class="grid_4 omega sidebar sidebar_b">
+						<div class="widget">
+							<div class="title"><h4></h4></div>
+
+						</div><!-- widget -->
+
+						<div class="widget">
+						
+						</div><!-- widget -->
+
+
+
+
+
+						<div class="widget">
+
+						</div><!-- widget -->
+
+
+
+					</div><!-- end grid8 -->
+				</div><!-- end grid9 -->
+
+				<div class="grid_3 omega sidebar sidebar_a">
+					<div class="widget">
+						<script type="text/javascript" src="https://www.oil-price.net/COMMODITIES/gen.php?lang=en"> </script>
+						<noscript> To get <a href="http://www.oil-price.net/dashboard.php?lang=en#COMMODITIES">gold, oil and
+							commodity prices</a>, please enable Javascript.</noscript>
+
+									<br><br><br><br>
+							<div class="">
+								<script type="text/javascript" src="https://www.oil-price.net/widgets/brent_crude_price_large/gen.php?lang=en"> </script>
+								<noscript> To get the BRENT <a href="http://www.oil-price.net/dashboard.php?lang=en#brent_crude_price_large">oil price</a>,
+									 please enable Javascript.</noscript>
+
+							</div>
+					</div><!-- widget -->
+
+
+
+
+
+
+
+
+				</div><!-- /grid3 sidebar A -->
+			</div><!-- /row -->
+		</div><!-- /end page content -->
+
+		<footer id="footer">
+			<div class="row clearfix">
+				<div class="grid_3">
+					<div class="widget">
+						<div class="title"><h4>About Middle East Oil</h4></div>
+						<p> Middle East Oil.<br><br>
+
+Email:	<a href=""></a> </p>
+					</div><!-- /widget -->
+				</div><!-- /grid3 -->
+
+				<div class="grid_3">
+					<div class="widget">
+						<div class="title"><h4>Recent Posts</h4></div>
+						<ul class="small_posts">
+							<li class="clearfix">
+								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb4.jpg'%}" alt="#"></a>
+								<h3><a href="#">What is the worst could be the worst?</a></h3>
+
+							</li>
+							<li class="clearfix">
+								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb5.jpg'%}" alt="#"></a>
+								<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+
+							</li>
+							<li class="clearfix">
+								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb6.jpg'%}" alt="#"></a>
+								<h3><a href="#">Paul Thomson on post with SoundCloud</a></h3>
+
+							</li>
+						</ul>
+					</div><!-- /widget -->
+				</div><!-- /grid3 -->
+
+				<div class="grid_3">
+					<div class="widget">
+						<div class="title"><h4>Best Reviews</h4></div>
+						<ul class="small_posts">
+							<li class="clearfix">
+								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb13.jpg'%}" alt="#"></a>
+								<h3><a href="#">What is the worst could be the worst?</a></h3>
+								<div class="meta mb"> <a class="cat color1" href="#" title="View all posts under Entertainment">Entertainment</a><span class="post_rating" href="#" title="Rating">8.89</span> </div>
+							</li>
+							<li class="clearfix">
+								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb12.jpg'%}" alt="#"></a>
+								<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+								<div class="meta mb"> <a class="cat color3" href="#" title="View all posts under News">News</a><span class="post_rating" href="#" title="Rating">8.1</span> </div>
+							</li>
+							<li class="clearfix">
+								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb11.jpg'%}" alt="#"></a>
+								<h3><a href="#">Paul Thomson on post with SoundCloud</a></h3>
+								<div class="meta mb"> <a class="cat color4" href="#" title="View all posts under Sports">Sports</a><span class="post_rating" href="#" title="Rating">7.95</span> </div>
+							</li>
+						</ul>
+					</div><!-- /widget -->
+				</div><!-- /grid3 -->
+
+				<div class="grid_3">
+					<div class="widget">
+						<div class="title"><h4>Newsletters</h4></div>
+						<p> To receive the latest updates and Latest Posts enter your email. </p>
+						<form id="newsletters" method="post" action="http://feedburner.google.com/fb/a/mailverify" target="popupwindow" onSubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=sevenpsd', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+							<input type="email" onFocus="if (this.value=='Type Your Email') this.value = '';" onBlur="if (this.value=='') this.value = 'Type Your Email';" value="Type Your Email" placeholder="Type Your Email" required="required">
+							<button type="submit"><i class="icon-checkmark"></i></button>
+						</form>
+					</div><!-- /widget -->
+
+					<div class="widget">
+						<div class="title"><h4>Follow us</h4></div>
+						<div class="social">
+							<a href="#" class="toptip" title="Twitter"><i class="fa-twitter"></i></a>
+							<a href="#" class="toptip" title="Facebook"><i class="fa-facebook"></i></a>
+							<a href="#" class="toptip" title="Google Plus"><i class="fa-google-plus"></i></a>
+							<a href="#" class="toptip" title="Linkedin"><i class="fa-linkedin"></i></a>
+							<a href="#" class="toptip" title="Github"><i class="fa-github"></i></a>
+							<a href="#" class="toptip" title="instagram"><i class="fa-instagram"></i></a>
+							<a href="#" class="toptip" title="Dribbble"><i class="fa-dribbble"></i></a>
+						</div><!-- /social -->
+					</div><!-- /widget -->
+				</div><!-- /grid3 -->
+
+			</div><!-- /row -->
+
+			<div class="row clearfix">
+				<div class="footer_last">
+					<span class="copyright">© 2020 <a href=""></a>. All Rights Reserved. Powered by <a href="">Middle East Oil</a>.</span>
+
+					<div id="toTop" class="toptip" title="Back to Top"><i class="icon-arrow-thin-up"></i></div>
+				</div><!-- /last footer -->
+			</div><!-- /row -->
+
+		</footer><!-- /footer -->
+	</div><!-- /layout -->
+
+	<!-- Scripts -->
+		<script type="text/javascript" src="{% static 'js/jquery.min.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/ipress.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/owl.carousel.min.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery.ticker.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/custom.js'%}"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+
+			// Disqus
+			var disqus_shortname = 'officialtemplate';
+			(function () {
+				var s = document.createElement('script'); s.async = true;
+				s.type = 'text/javascript';
+				s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+				(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+			}());
+
+			function date_time(id){
+				date = new Date;
+				year = date.getFullYear();
+				month = date.getMonth();
+				months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+				d = date.getDate();
+				day = date.getDay();
+				days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+				h = date.getHours();
+				if(h<10){
+					h = "0"+h;}
+					m = date.getMinutes();
+					if(m<10){
+						m = "0"+m;
+					}
+					s = date.getSeconds();
+					if(s<10){
+						s = "0"+s;
+					}
+				// result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m+':'+s;
+				result = ''+days[day]+' '+d+' '+months[month]+' '+year;
+				document.getElementById(id).innerHTML = result;
+				setTimeout('date_time("'+id+'");','1000');
+				return true;
+			}
+			window.onload = date_time('date_time');
+		/* ]]> */
+		</script>
+</body>
+</html>
