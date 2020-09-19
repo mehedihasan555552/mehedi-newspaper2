@@ -58,36 +58,36 @@ def index(request):
 def Gas(request):
     category=['1']
     gass=LatestPost.objects.order_by('-date_posted').filter(category=category)
-    w =GasAndOil.objects.order_by('-date_posted').filter(category=category)
-    p =Criptocurrency.objects.order_by('-date_posted').filter(category=category)
-    x =Technology.objects.order_by('-date_posted').filter(category=category)
-    y =Post_of_the_day.objects.order_by('-date_posted').filter(category=category)
-    posts = LatestPost.objects.all().order_by('-date_posted')
-    context={'gass':gass,'w':w,'p':p,'x':x,'y':y,'posts':posts}
+
+    context={'gass':gass}
     return render(request, 'base/gas.html',context)
 
 
+def MEO(request):
+    gass=MEOCHANNEL.objects.all().order_by('-date_posted')
+
+    context={'gass':gass}
+    return render(request, 'base/meo.html',context)
+
+
 def Cripto(request):
-    category=['2'] or ['3']
+    category=['2']
     gass=LatestPost.objects.order_by('-date_posted').filter(category=category)
-    w =GasAndOil.objects.order_by('-date_posted').filter(category=category)
-    p =Criptocurrency.objects.order_by('-date_posted').filter(category=category)
-    x =Technology.objects.order_by('-date_posted').filter(category=category)
-    y =Post_of_the_day.objects.order_by('-date_posted').filter(category=category)
-    posts = LatestPost.objects.all().order_by('-date_posted')
-    context={'gass':gass,'w':w,'p':p,'x':x,'y':y,'posts':posts}
-    return render(request, 'base/cripto.html',context)
+    context={'gass':gass}
+    return render(request, 'base/economy.html',context)
+
+
+def Enorgy(request):
+    category=['3']
+    gass=LatestPost.objects.order_by('-date_posted').filter(category=category)
+    context={'gass':gass}
+    return render(request, 'base/enorgy.html',context)
 
 
 def Tech(request):
     category=['5']
     gass=LatestPost.objects.order_by('-date_posted').filter(category=category)
-    w =GasAndOil.objects.order_by('-date_posted').filter(category=category)
-    p =Criptocurrency.objects.order_by('-date_posted').filter(category=category)
-    x =Technology.objects.order_by('-date_posted').filter(category=category)
-    y =Post_of_the_day.objects.order_by('-date_posted').filter(category=category)
-    posts = LatestPost.objects.all().order_by('-date_posted')
-    context={'gass':gass,'w':w,'p':p,'x':x,'y':y,'posts':posts}
+    context={'gass':gass}
     return render(request, 'base/tech.html',context)
 
 class LatestPostt(DetailView):

@@ -10,6 +10,8 @@ urlpatterns = [
     path('meo/<int:pk>/', MeoPostt.as_view(), name='meo'),
     path('gas/', views.Gas, name='gas'),
     path('cripto/', views.Cripto, name='cripto'),
+    path('enorgy/', views.Enorgy, name='enorgy'),
+    path('meo/', views.MEO, name='meo'),
     path('tech/', views.Tech, name='tech'),
 
 

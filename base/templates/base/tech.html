@@ -1,11 +1,7 @@
 {%load static%}
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-
-
+<html lang="en-US">
+<head>
 	<title>Middle East Oil</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -14,114 +10,110 @@
 		<meta name="keywords" content="iPress, magazine, light, dark, themeforest, multi purpose, premium, unlimited, blog, news, AD, optimized">
 
 	<!-- Styles -->
-		<link rel="stylesheet" type="text/css" href="{% static 'style.css'%}" media="screen" />
-		<link rel="stylesheet" type="text/css" href="{% static 'styles/icons.css'%}" media="screen" />
-		<link rel="stylesheet" type="text/css" href="{% static 'styles/animate.css'%}" media="screen" />
-		<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css'%}" media="screen" />
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
-
-
-
-
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles/icons.css'%}" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles/animate.css'%}" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles/responsive.css'%}" media="screen" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
 
 	<!-- Favicon -->
-		<link rel="shortcut icon" href="{% static 'images/favicon.ico'%}">
-		<link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png'%}">
-		<link rel="stylesheet" href="{% static 'slide.css'%}">
+	<link rel="shortcut icon" href="{% static 'images/favicon.ico'%}">
+	<link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png'%}">
 
-
-<link rel="stylesheet" type="text/css" href="{% static 'break/breaking-news-ticker.min.css'%}">
-
-
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EmulateIE8; IE=EDGE" />
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
-
-
-
-
 <body>
 	<div id="layout" class="boxed">
 		<header id="header">
+			<div class="a_head">
+				<div class="row clearfix">
+					<div class="breaking_news lefter">
+						<div class="freq_out">
+							<div class="freq"><div class="inner_f"></div><div id="layerBall"></div></div>
+						</div><!-- /freq -->
+						<ul id="js-news" class="js-hidden">
 
-			<div class="section-container">
-				<div class="demo-box">
+						</ul><!-- /js news -->
+					</div><!-- /breaking news -->
 
-					<!-- DEMO5 HTML STARTS HERE -->
-					<!-- *********************** -->
-					<div class="bn-breaking-news" id="newsTicker5">
-						<div class="bn-label" id="uu">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							 BRAEKING NEWS <div class="bn-label">  Date:{% now "jS F Y H:i" %}
+					<div class="right_bar">
+						<div class="lang">
 
-						</div>   </div>
-							<div class="bn-news">
-									{% for post in posts %}
-								<ul>
-										<li><a href="{% url 'latestpost' post.id %}">{{post.title}}</a></li>
-								</ul>
-								{% endfor %}
-							</div>
-							<div class="bn-controls">
-								<button><span class="bn-arrow bn-prev"></span></button>
-								<button><span class="bn-action"></span></button>
-								<button><span class="bn-arrow bn-next"></span></button>
-							</div>
-						</div>
-						<!-- *********************** -->
-						<!-- DEMO5 HTML END HERE ** -->
+						</div><!-- /lang -->
 
-				</div>
-			</div>
+						<div class="social social_head">
+							<a href="#" class="bottomtip" title="Twitter"><i class="fa-twitter"></i></a>
+							<a href="#" class="bottomtip" title="Facebook"><i class="fa-facebook"></i></a>
+							<a href="#" class="bottomtip" title="Google Plus"><i class="fa-google-plus"></i></a>
+							<a href="#" class="bottomtip" title="Linkedin"><i class="fa-linkedin"></i></a>
+							<a href="#" class="bottomtip" title="Github"><i class="fa-github"></i></a>
+							<a href="#" class="bottomtip" title="instagram"><i class="fa-instagram"></i></a>
+							<a href="#" class="bottomtip" title="Dribbble"><i class="fa-dribbble"></i></a>
+						</div><!-- /social -->
 
-
-
-
-
+						<span id="date_time"></span><!-- /date -->
+					</div><!-- /right bar -->
+				</div><!-- /row -->
+			</div><!-- /a head -->
 
 			<div class="b_head">
 				<div class="row clearfix">
 					<div class="logo">
-						<a href="{% url 'index' %}" title=""><img src="{% static 'images/logo.png'%}" alt="iPress - Responsive News/Blog/Magazine HTML5"></a>
+						<a href="index.html" title=""><img src="images/logo.png" alt=""></a>
 					</div><!-- /logo -->
 
 
 				</div><!-- /row -->
 			</div><!-- /b head -->
 
-			<div class="row clearfix">
-				<div class="sticky_true">
-					<div class="c_head clearfix">
-						<nav>
-							<ul class="sf-menu">
-								<li class="current colordefault home_class"><a href="{% url 'index'%}"><i class="icon-home"></i></a>
 
-								</li>
-								<li class="color1"><a href="#"><i class="fa-reorder"></i></a>
-
-								</li>
-								<li class="color2"><a href="{% url 'gas' %}">Gas&Oil</a>
-									<ul class="col4 mega">
-
-									</ul>
-								</li>
-								<li class="color3"><a href="{% url 'cripto'%}">Criptocurrency</a>
-									<ul class="col4 mega">
-
-									</ul>
-								</li>
-								<li class="color4"><a href="{% url 'cripto'%}">Currency</a>
-									<ul class="col4 mega">
+						<div class="b_head">
+							<div class="row clearfix">
+								<div class="logo">
+									<a href="{% url 'index' %}" title=""><img src="{% static 'images/logo.png'%}" alt=""></a>
+								</div><!-- /logo -->
 
 
-									</ul>
-								</li>
+							</div><!-- /row -->
+						</div><!-- /b head -->
 
-								<li class="color6"><a href="{% url 'tech'%}">Technology</a></li>
+						<div class="row clearfix">
+							<div class="sticky_true">
+								<div class="c_head clearfix">
+									<nav>
+										<ul class="sf-menu">
+											<li class="current colordefault home_class"><a href="{% url 'index'%}"><i class="icon-home"></i></a>
 
-							</ul><!-- /menu -->
-						</nav><!-- /nav -->
+											</li>
+
+											<li class="color2"><a href="{% url 'gas'%}">GAS&OIL</a>
+												<ul class="col4 mega">
+
+												</ul>
+											</li>
+											<li class="color3"><a href="{% url 'cripto'%}">ECONOMY </a>
+												<ul class="col4 mega">
+
+												</ul>
+											</li>
+											<li class="color4"><a href="{% url 'enorgy'%}">ENERGY </a>
+												<ul class="col4 mega">
+
+
+												</ul>
+											</li>
+
+											<li class="color6"><a href="{% url 'tech'%}">Technology</a></li>
+
+											<li class="color6"><a href="{% url 'meo'%}">MEO PICS </a></li>
+												<li class="color3"><a href="{% url 'tech'%}">AR/EN </a></li>
+
+										</ul><!-- /menu -->
+
+									</nav><!-- /nav -->
 
 						<div class="right_icons">
 							<a class="random_post bottomtip" href="#" title="Random Post"><i class="icon-media-shuffle"></i></a><!-- /random post -->
@@ -130,7 +122,7 @@
 								<div class="search_icon"><i class="fa-search"></i></div>
 								<div class="s_form">
 									<form action="search_result.html" id="search" method="get">
-										<input id="inputhead" name="search" type="text" onFocus="if (this.value=='Start Searching...') this.value = '';" onBlur="if (this.value=='') this.value = 'Start Searching...';" value="Start Searching..." placeholder="Start Searching ...">
+										<input id="inputhead" name="search" type="text" onfocus="if (this.value=='Start Searching...') this.value = '';" onblur="if (this.value=='') this.value = 'Start Searching...';" value="Start Searching..." placeholder="Start Searching ...">
 										<button type="submit"><i class="fa-search"></i></button>
 									</form><!-- /form -->
 								</div><!-- /s form -->
@@ -141,120 +133,222 @@
 			</div><!-- /row -->
 		</header><!-- /header -->
 
-
-
-
 		<div class="page-content">
 			<div class="row clearfix">
 				<div class="grid_9 alpha">
-					<div class="ipress_slider mbf">
-						<div class="slider_a owl-carouseltheme">
-							<!-- /slide -->
+					<div class="grid_8 alpha posts">
+						<div class="title colordefault"><h4>Posts by category " TECHNOLOGY "</h4></div>
 
-
-						</div><!-- /slider -->
-					</div><!-- /slider ipress -->
-
-
-
-						<div class="posts_block mbf clearfix">
-							<div class="title color5">
-								<h4>Technology </h4>
-								<a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
-							</div><!-- /title bar -->
-
-
-							{% for post in gass %}
-
-							<div class="grid_6 alpha">
-								<div class="mb float-shadow"><a href="{% url 'latestpost' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a></div>
-								<div class="post_m_content">
+					<!-- post -->
+						{% for post in gass %}
+						<div class="post_day mbf clearfix">
+							<div class="grid_6 alpha relative">
+								<a class="float-shadow" href="{% url 'latestpost' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a>
+							</div><!-- /grid6 alpha -->
+							<div class="grid_6 omega">
+								<div class="post_day_content">
 									<h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
 									<div class="meta mb"> {{post.date_posted}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
-
-								</div><!-- post content -->
+									<p> {{post.content|truncatewords:50|safe}} </p>
+								</div><!-- /post content -->
 							</div><!-- /grid6 omega -->
 
+						</div><!-- /post day -->
 							{% endfor %}
-
-
-              {% for post in w %}
-
-              <div class="grid_6 alpha">
-                <div class="mb float-shadow"><a href="{% url 'latestpost' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a></div>
-                <div class="post_m_content">
-                  <h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
-                  <div class="meta mb"> {{post.date_posted}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
-
-                </div><!-- post content -->
-              </div><!-- /grid6 omega -->
-
-              {% endfor %}
-
-
-              {% for post in p %}
-
-              <div class="grid_6 alpha">
-                <div class="mb float-shadow"><a href="{% url 'latestpost' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a></div>
-                <div class="post_m_content">
-                  <h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
-                  <div class="meta mb"> {{post.date_posted}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
-
-                </div><!-- post content -->
-              </div><!-- /grid6 omega -->
-
-              {% endfor %}
-
-
-              {% for post in x %}
-
-              <div class="grid_6 alpha">
-                <div class="mb float-shadow"><a href="{% url 'latestpost' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a></div>
-                <div class="post_m_content">
-                  <h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
-                  <div class="meta mb"> {{post.date_posted}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
-
-                </div><!-- post content -->
-              </div><!-- /grid6 omega -->
-
-              {% endfor %}
-
-
-              {% for post in y %}
-
-              <div class="grid_6 alpha">
-                <div class="mb float-shadow"><a href="{% url 'latestpost' post.id %}"><img src="{{post.post_pic.url}}" alt=""></a></div>
-                <div class="post_m_content">
-                  <h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
-                  <div class="meta mb"> {{post.date_posted}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
-
-                </div><!-- post content -->
-              </div><!-- /grid6 omega -->
-
-              {% endfor %}
-
-							<div class="grid_6 omega">
-								<div class="small_slider_music owl-carousel owl-theme">
-									<div class="item clearfix">
-										<ul class="small_posts">
-
-										</ul>
-									</div>
-
-								</div><!-- /slides -->
-							</div><!-- grid6 omega -->
-						</div><!-- posts block Music -->
+					<!-- /post -->
 
 
 
 
-
-
+						<div class="pagination-tt clearfix">
+							<ul>
+								<li><span>1</span></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><span>...</span></li>
+								<li><a href="#">27</a></li>
+							</ul>
+							<span class="pages">Page 1 of 27</span>
+						</div><!-- /pagination -->
 
 					</div><!-- end grid9 -->
 
+					<div class="grid_4 omega sidebar sidebar_b">
+						<div class="widget">
+							<div class="title"><h4>New Video</h4></div>
+							<iframe src="http://player.vimeo.com/video/13897659?color=E84A4A" height="180"></iframe><a href="http://vimeo.com/13897659">Iconic Poster design</a>
+						</div><!-- widget -->
+
+						<div class="widget">
+							<div id="calendar_wrap"><table id="wp-calendar">
+								<caption>January 2014</caption>
+									<thead>
+										<tr>
+											<th scope="col" title="Monday">M</th>
+											<th scope="col" title="Tuesday">T</th>
+											<th scope="col" title="Wednesday">W</th>
+											<th scope="col" title="Thursday">T</th>
+											<th scope="col" title="Friday">F</th>
+											<th scope="col" title="Saturday">S</th>
+											<th scope="col" title="Sunday">S</th>
+										</tr>
+									</thead>
+
+									<tfoot>
+										<tr>
+											<td colspan="3" id="prev"><a href="#" title="View posts for December 2013">« Dec</a></td>
+											<td class="pad">&nbsp;</td>
+											<td colspan="3" id="next" class="pad">&nbsp;</td>
+										</tr>
+									</tfoot>
+
+									<tbody>
+										<tr><td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+										<tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+										<tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td id="today">18</td><td>19</td></tr>
+										<tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+										<tr><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td class="pad" colspan="2">&nbsp;</td></tr>
+									</tbody>
+								</table>
+							</div>
+						</div><!-- widget -->
+
+						<div class="widget">
+							<div class="title"><h4>Random Posts</h4></div>
 
 
+
+
+						</div><!-- widget -->
+
+						<div class="widget">
+							<div class="title"><h4>Popular Tags</h4></div>
+							<div class="tags">
+								<a href="#" title="17 topic"> corporate </a>
+								<a href="#" title="44 topic"> theme </a>
+								<a href="#" title="10 topic"> css3 </a>
+								<a href="#" title="2 topic"> premium </a>
+								<a href="#" title="29 topic"> html5 </a>
+								<a href="#" title="4 topic"> business </a>
+								<a href="#" title="20 topic"> all purpose </a>
+								<a href="#" title="14 topic"> jquery </a>
+								<a href="#" title="1 topic"> muse template </a>
+								<a href="#" title="4 topic"> minimalist </a>
+							</div>
+						</div><!-- widget -->
+
+					</div><!-- end grid9 -->
+				</div><!-- end grid9 -->
+
+				<div class="grid_3 omega sidebar sidebar_a">
+					<div class="widget">
+						<ul class="counter clearfix">
+							<li class="twitter">
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<span> 2545 <br> Followes </span>
+							</li>
+							<li class="facebook">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<span> 1317 <br> Likes </span>
+							</li>
+							<li class="dribbble">
+								<a href="#"><i class="fa fa-dribbble"></i></a>
+								<span> 325 <br> Followes </span>
+							</li>
+							<li class="rss">
+								<a href="#"><i class="fa fa-rss"></i></a>
+								<span> 27 <br> Subscribers </span>
+							</li>
+						</ul>
+					</div><!-- widget -->
+
+					<div class="widget">
+						<div class="ads_widget clearfix">
+							<a href="#"><img src="images/ads2.jpg" alt="#"></a>
+							<a href="#" class="lefter mt"><img src="images/ads3.jpg" alt="#"></a>
+							<a href="#" class="righter mt"><img src="images/ads3.jpg" alt="#"></a>
+						</div><!-- widget -->
+					</div><!-- widget -->
+
+					<div class="widget">
+						<div class="title"><h4>What's Hot</h4></div>
+
+							<div class="small_slider_hots owl-carousel owl-theme">
+								<div class="item clearfix">
+									<ul class="small_posts">
+										<li class="clearfix">
+											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb13.jpg" alt="#"><span>1</span></a>
+											<h3><a href="single_post.html">What is the worst could be the worst?</a></h3>
+											<div class="meta mb"> <a class="cat color1" href="#" title="View all posts under Entertainment">Entertainment</a><span class="post_rating" href="#" title="Rating">8.89</span> </div>
+										</li>
+										<li class="clearfix">
+											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb12.jpg" alt="#"><span>2</span></a>
+											<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+											<div class="meta mb"> <a class="cat color3" href="#" title="View all posts under News">News</a><span class="post_rating" href="#" title="Rating">8.1</span> </div>
+										</li>
+										<li class="clearfix">
+											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb11.jpg" alt="#"><span>3</span></a>
+											<h3><a href="single_post.html">Paul Thomson on post with SoundCloud</a></h3>
+											<div class="meta mb"> <a class="cat color4" href="#" title="View all posts under Sports">Sports</a><span class="post_rating" href="#" title="Rating">7.95</span> </div>
+										</li>
+										<li class="clearfix">
+											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb10.jpg" alt="#"><span>4</span></a>
+											<h3><a href="single_post.html">For the days of peace and warmth</a></h3>
+											<div class="meta mb"> <a class="cat color5" href="#" title="View all posts under People">People</a><span class="post_rating" href="#" title="Rating">7.5</span> </div>
+										</li>
+									</ul>
+								</div>
+								<div class="item clearfix">
+									<ul class="small_posts">
+										<li class="clearfix">
+											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb9.jpg" alt="#"><span>5</span></a>
+											<h3><a href="single_post.html">What worst could be the worst?</a></h3>
+											<div class="meta mb"> <a class="cat color6" href="#" title="View all posts under People">People</a><span class="post_rating" href="#" title="Rating">7</span> </div>
+										</li>
+										<li class="clearfix">
+											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb8.jpg" alt="#"><span>6</span></a>
+											<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+											<div class="meta mb"> <a class="cat color7" href="#" title="View all posts under TV">TV</a><span class="post_rating" href="#" title="Rating">5.89</span> </div>
+										</li>
+										<li class="clearfix">
+											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb7.jpg" alt="#"><span>7</span></a>
+											<h3><a href="single_post.html">Paul Thomson on post with SoundCloud</a></h3>
+											<div class="meta mb"> <a class="cat color8" href="#" title="View all posts under Society">Society</a><span class="post_rating" href="#" title="Rating">5.5</span> </div>
+										</li>
+										<li class="clearfix">
+											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb6.jpg" alt="#"><span>8</span></a>
+											<h3><a href="single_post.html">For the days of peace and warmth</a></h3>
+											<div class="meta mb"> <a class="cat color3" href="#" title="View all posts under Health">Health</a><span class="post_rating" href="#" title="Rating">4</span> </div>
+										</li>
+									</ul>
+								</div>
+							</div><!-- /slides -->
+					</div><!-- /widget -->
+
+					<div class="widget">
+						<div class="latest_tweets">
+
+						</div><!-- /latest tweets -->
+					</div><!-- /widget -->
+
+					<div class="widget">
+						<div class="title"><h4>MiddleEastOil Stocks</h4></div>
+					</div>
+					<script type="text/javascript" src="https://www.oil-price.net/COMMODITIES/gen.php?lang=en"> </script>
+					<noscript> To get <a href="http://www.oil-price.net/dashboard.php?lang=en#COMMODITIES">gold, oil and
+						commodity prices</a>, please enable Javascript.</noscript>
+
+								<br><br><br><br>
+						<div class="">
+							<script type="text/javascript" src="https://www.oil-price.net/widgets/brent_crude_price_large/gen.php?lang=en"> </script>
+							<noscript> To get the BRENT <a href="http://www.oil-price.net/dashboard.php?lang=en#brent_crude_price_large">oil price</a>,
+								 please enable Javascript.</noscript>
+
+						</div>
+
+					</div><!-- /widget -->
 
 				</div><!-- /grid3 sidebar A -->
 			</div><!-- /row -->
@@ -264,10 +358,10 @@
 			<div class="row clearfix">
 				<div class="grid_3">
 					<div class="widget">
-						<div class="title"><h4>About Middle East Oil</h4></div>
-						<p> Middle East Oil.<br><br>
+						<div class="title"><h4>About MiddleEastOil</h4></div>
+						<p> iPress is a magazine/blog/ad/review template. Nunc montes odio phasellus dignissim, aenean, nec augue velit integer elementum ut montes quis integer cursus, est purus, lectus duis, scelerisque tincidunt ultricies phasellus elementum turpis tristique.<br><br>
 
-Email:	<a href=""></a> </p>
+Email:	<a href="contact.html">MiddleEastOil@gmail.com</a> </p>
 					</div><!-- /widget -->
 				</div><!-- /grid3 -->
 
@@ -276,19 +370,19 @@ Email:	<a href=""></a> </p>
 						<div class="title"><h4>Recent Posts</h4></div>
 						<ul class="small_posts">
 							<li class="clearfix">
-								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb4.jpg'%}" alt="#"></a>
-								<h3><a href="#">What is the worst could be the worst?</a></h3>
-
+								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb4.jpg" alt="#"></a>
+								<h3><a href="single_post.html">What is the worst could be the worst?</a></h3>
+								<div class="meta mb"> 1 day ago  /  <a href="single_post.html">1 comment</a> </div>
 							</li>
 							<li class="clearfix">
-								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb5.jpg'%}" alt="#"></a>
-								<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-
+								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb5.jpg" alt="#"></a>
+								<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+								<div class="meta mb"> 3 days ago  /  <a href="single_post.html">3 comments</a> </div>
 							</li>
 							<li class="clearfix">
-								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb6.jpg'%}" alt="#"></a>
-								<h3><a href="#">Paul Thomson on post with SoundCloud</a></h3>
-
+								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb6.jpg" alt="#"></a>
+								<h3><a href="single_post.html">Paul Thomson on post with SoundCloud</a></h3>
+								<div class="meta mb"> 6 days ago  /  <a href="single_post.html">5 comments</a> </div>
 							</li>
 						</ul>
 					</div><!-- /widget -->
@@ -299,18 +393,18 @@ Email:	<a href=""></a> </p>
 						<div class="title"><h4>Best Reviews</h4></div>
 						<ul class="small_posts">
 							<li class="clearfix">
-								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb13.jpg'%}" alt="#"></a>
-								<h3><a href="#">What is the worst could be the worst?</a></h3>
+								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb13.jpg" alt="#"></a>
+								<h3><a href="single_post.html">What is the worst could be the worst?</a></h3>
 								<div class="meta mb"> <a class="cat color1" href="#" title="View all posts under Entertainment">Entertainment</a><span class="post_rating" href="#" title="Rating">8.89</span> </div>
 							</li>
 							<li class="clearfix">
-								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb12.jpg'%}" alt="#"></a>
-								<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb12.jpg" alt="#"></a>
+								<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
 								<div class="meta mb"> <a class="cat color3" href="#" title="View all posts under News">News</a><span class="post_rating" href="#" title="Rating">8.1</span> </div>
 							</li>
 							<li class="clearfix">
-								<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb11.jpg'%}" alt="#"></a>
-								<h3><a href="#">Paul Thomson on post with SoundCloud</a></h3>
+								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb11.jpg" alt="#"></a>
+								<h3><a href="single_post.html">Paul Thomson on post with SoundCloud</a></h3>
 								<div class="meta mb"> <a class="cat color4" href="#" title="View all posts under Sports">Sports</a><span class="post_rating" href="#" title="Rating">7.95</span> </div>
 							</li>
 						</ul>
@@ -321,8 +415,8 @@ Email:	<a href=""></a> </p>
 					<div class="widget">
 						<div class="title"><h4>Newsletters</h4></div>
 						<p> To receive the latest updates and Latest Posts enter your email. </p>
-						<form id="newsletters" method="post" action="http://feedburner.google.com/fb/a/mailverify" target="popupwindow" onSubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=sevenpsd', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-							<input type="email" onFocus="if (this.value=='Type Your Email') this.value = '';" onBlur="if (this.value=='') this.value = 'Type Your Email';" value="Type Your Email" placeholder="Type Your Email" required="required">
+						<form id="newsletters" method="post" action="" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=sevenpsd', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+							<input type="email" onfocus="if (this.value=='Type Your Email') this.value = '';" onblur="if (this.value=='') this.value = 'Type Your Email';" value="Type Your Email" placeholder="Type Your Email" required="required">
 							<button type="submit"><i class="icon-checkmark"></i></button>
 						</form>
 					</div><!-- /widget -->
@@ -356,36 +450,40 @@ Email:	<a href=""></a> </p>
 	</div><!-- /layout -->
 
 	<!-- Scripts -->
-		<script type="text/javascript" src="{% static 'js/jquery.min.js'%}"></script>
-		<script type="text/javascript" src="{% static 'js/ipress.js'%}"></script>
-		<script type="text/javascript" src="{% static 'js/owl.carousel.min.js'%}"></script>
-		<script type="text/javascript" src="{% static 'js/jquery.ticker.js'%}"></script>
-		<script type="text/javascript" src="{% static 'js/custom.js'%}"></script>
-
-
-
-
-		<script src="{% static 'break/jquery-3.3.1.min.js'%}"></script>
-
-		<!-- Highlight.js plugin code-->
-		<script src="{% static 'break/highlight.pack.js'%}"></script>
-
-
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/ipress.js"></script>
+		<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ticker.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
 		<script type="text/javascript">
-
-			hljs.initHighlightingOnLoad();
-
-			$(document).ready(function(){
-
-				$('#newsTicker5').breakingNews({
-					effect: 'typography'
-				});
-
-			});
-
+		/* <![CDATA[ */
+			function date_time(id){
+				date = new Date;
+				year = date.getFullYear();
+				month = date.getMonth();
+				months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+				d = date.getDate();
+				day = date.getDay();
+				days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+				h = date.getHours();
+				if(h<10){
+					h = "0"+h;}
+					m = date.getMinutes();
+					if(m<10){
+						m = "0"+m;
+					}
+					s = date.getSeconds();
+					if(s<10){
+						s = "0"+s;
+					}
+				// result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m+':'+s;
+				result = ''+days[day]+' '+d+' '+months[month]+' '+year;
+				document.getElementById(id).innerHTML = result;
+				setTimeout('date_time("'+id+'");','1000');
+				return true;
+			}
+			window.onload = date_time('date_time');
+		/* ]]> */
 		</script>
-
-
-
 </body>
 </html>

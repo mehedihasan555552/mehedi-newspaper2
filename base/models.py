@@ -9,8 +9,8 @@ from multiselectfield import MultiSelectField
 
 class LatestPost(models.Model):
     MY_CHOICES = ((1, 'Gas&Oil'),
-              (2, 'Criptocurrency'),
-              (3, 'Currency'),
+              (2, 'Economy'),
+              (3, 'Energy'),
               (5, 'Technology'))
     title = models.CharField(max_length=100)
     content = models.TextField()
@@ -29,17 +29,9 @@ class LatestPost(models.Model):
 
 
 class MEOCHANNEL(models.Model):
-    CATEGORY=(
-        ('Gas&Oil', 'Gas&Oil'),
-        ('Criptocurrency', 'Criptocurrency'),
-        ('Currency', 'Currency'),
-        ('Technology', 'Technology'),
 
-    )
     title = models.CharField(max_length=100)
-    content = models.TextField()
     video = EmbedVideoField(blank=True)
-    category = models.CharField(max_length=200, choices=CATEGORY,blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
 
 

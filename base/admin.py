@@ -10,5 +10,5 @@ class PostAdmin(SummernoteModelAdmin):
 
 
 
-admin.site.register(LatestPost,PostAdmin)
+admin.site.register(LatestPost)
 admin.site.register(MEOCHANNEL)
