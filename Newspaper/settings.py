@@ -130,20 +130,6 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 
-"""
-
-#S3 BUCKETS CONFIG
-
-AWS_ACCESS_KEY_ID = 'AKIA6HMJD3Z2IFK464P6'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'hello-meo'
-
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-"""
 
 
 

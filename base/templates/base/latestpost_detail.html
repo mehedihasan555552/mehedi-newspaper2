@@ -1,4 +1,5 @@
 {% load static %}
+{% load embed_video_tags %}
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "><!--<![endif]-->
@@ -61,6 +62,8 @@ Skip to main content
 </div>
 </div>
 </div>
+
+
 <div class="b_head">
 <div class="row clearfix">
 <div class="logo">
@@ -99,7 +102,7 @@ Skip to main content
 
 				</ul>
 			</li>
-			<li class="color4"><a href="{% url 'cripto'%}">ENERGY </a>
+			<li class="color4"><a href="{% url 'enorgy'%}">ENERGY </a>
 				<ul class="col4 mega">
 
 
@@ -108,7 +111,10 @@ Skip to main content
 
 			<li class="color6"><a href="{% url 'tech'%}">Technology</a></li>
 
-			<li class="color6"><a href="{% url 'tech'%}">MEO PICS </a></li>
+			<li class="color6"><a href="{% url 'meo'%}">MEO Channel </a></li>
+
+				<li class="color6"><a href="www.middleeastoil.net/ar">AR/EN </a></li>
+
 
 		</ul><!-- /menu -->
 
@@ -116,13 +122,14 @@ Skip to main content
 
 
 <div class="right_icons">
+	<a class="random_post bottomtip" href="www.facebook.com/middleeastoil.net" title=""><i class="fa fa-facebook"></i></a>
+		<a class="random_post bottomtip" href="https://www.youtube.com/channel/UCg6PYIAN4wTuuhNn_y4yMvQ" title=""><i class="fa fa-youtube"></i></a>
+			<a class="random_post bottomtip" href="https://twitter.com/middleeastoil" title=""><i class="fa fa-twitter"></i></a>
+				<a class="random_post bottomtip" href="www.rss.com" title=""><i class="fa fa-rss"></i></a>
 <div class="search">
-<div class="search_icon"><i class="fa-search"></i></div>
+
 <div class="s_form">
-<form action="#" id="search" method="get">
-<input id="inputhead" name="search" type="text" onFocus="if (this.value=='Start Searching...') this.value = '';" onBlur="if (this.value=='') this.value = 'Start Searching...';" value="Start Searching..." placeholder="Start Searching ...">
-<button type="submit"><i class="fa-search"></i></button>
-</form>
+
 </div>
 </div>
 </div>
@@ -130,6 +137,10 @@ Skip to main content
 </div>
 </div>
 </header>
+
+
+
+
 <div class="page-content">
 <div class="row clearfix page">
 <div class="grid_9 alpha">
@@ -334,23 +345,8 @@ Skip to main content
 <div class="views-element-container related_posts mbf clearfix clear-both float-left width100 mbf clearfix blockcontent" id="block-views-block-related-posts-block-1">
 
 
-
-
-
-
-
-
-
-
-
 <div class="carousel-related">
 <div class="item float-shadow first">
-
-
-
-
-
-
 
 
 
@@ -422,7 +418,7 @@ Skip to main content
 
 
 
-<div><p><iframe height="180" src="https://player.vimeo.com/video/259976635?color=E84A4A"></iframe><a href="https://player.vimeo.com/video/259976635">Envato is the leading marketplace for creative assets and creative people</a></p>
+<div><p><iframe height="180" 	{% video objects.video '100% x 50%' %}></iframe><a href="">Envato is the leading marketplace for creative assets and creative people</a></p>
 </div>
 
 </div>
@@ -463,15 +459,6 @@ Skip to main content
 <div class="views-element-container widget recent_comments widget" id="block-views-block-comments-recent-block-1">
 
 
-
-
-
-
-
-
-
-
-
 <div class="item-list">
 
 </div>
@@ -495,27 +482,6 @@ Skip to main content
 <div id="block-socialsidebar" class="widget">
 
 
-
-
-<div><ul class="counter clearfix">
-<li class="twitter">
-<a href="#"><i class="fa fa-twitter"></i></a>
-<span> 2545 <br /> Followes </span>
-</li>
-<li class="facebook">
-<a href="#"><i class="fa fa-facebook"></i></a>
-<span> 1317 <br /> Likes </span>
-</li>
-<li class="dribbble">
-<a href="#"><i class="fa fa-dribbble"></i></a>
-<span> 325 <br /> Followes </span>
-</li>
-<li class="rss">
-<a href="#"><i class="fa fa-rss"></i></a>
-<span> 27 <br /> Subscribers </span>
-</li>
-</ul></div>
-
 </div>
 
 
@@ -523,7 +489,7 @@ Skip to main content
 
 
 <div id="block-userlogin" class="login_form widget" role="form">
-<div class="title"><h4>User login</h4></div>
+<div class="title"><h4>MiddleEastOil</h4></div>
 
 
 
@@ -536,32 +502,6 @@ Skip to main content
 <div class="js-form-item form-item js-form-type-textfield form-item-name js-form-item-name">
 
 
-
-<label for="edit-name" class="js-form-required form-required">Username</label>
-
-
-
-
-
-<input autocorrect="none" autocapitalize="none" spellcheck="false" class="gui-input form-text required" data-drupal-selector="edit-name" type="text" id="edit-name" name="name" value="" size="15" maxlength="60" required="required" aria-required="true" />
-
-</div>
-
-</div><div class="margin-bottom-2">
-
-
-
-<div class="js-form-item form-item js-form-type-password form-item-pass js-form-item-pass">
-
-
-
-<label for="edit-pass" class="js-form-required form-required">Password</label>
-
-
-
-
-
-<input class="gui-input form-text required" data-drupal-selector="edit-pass" type="password" id="edit-pass" name="pass" size="15" maxlength="128" required="required" aria-required="true" />
 
 </div>
 
@@ -594,8 +534,6 @@ Skip to main content
 
 
 
-
-<ul><li><a href="" title="Create a new user account." class="create-account-link">Create new account</a></li><li><a href="" title="Send password reset instructions via email." class="request-password-link">Reset your password</a></li></ul>
 
 </div>
 

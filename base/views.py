@@ -8,7 +8,7 @@ from django.utils import timezone
 def index(request):
     l=LatestPost.objects.all().order_by('-date_posted')[:1]
     ll=LatestPost.objects.all().order_by('-date_posted')[::-3]
-    posts=LatestPost.objects.all().order_by('-date_posted')[:2]
+    posts=LatestPost.objects.all().order_by('-date_posted')[:6]
     bb=LatestPost.objects.all().order_by('-date_posted')[:5]
     if request.method == 'GET':
         category=['1']
@@ -92,6 +92,11 @@ def Tech(request):
 
 class LatestPostt(DetailView):
     model = LatestPost
+
+
+
+
+
 
 
 

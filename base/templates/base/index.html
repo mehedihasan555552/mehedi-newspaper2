@@ -1,14 +1,14 @@
 {%load static%}
 {% load embed_video_tags %}
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><!--<![endif]-->
+<head>
 
 
 	<title>Middle East Oil</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="MobileOptimized" content="width" />
+	<meta name="HandheldFriendly" content="true" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<!-- Seo Meta -->
 		<meta name="description" content="iPress - Responsive News/Blog/Magazine HTML5 Template">
@@ -20,6 +20,9 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'css/styles/animate.css'%}" media="screen" />
 		<link rel="stylesheet" type="text/css" href="{% static 'css/styles/responsive.css'%}" media="screen" />
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
+
+
+
 
 
 
@@ -105,58 +108,63 @@
 			<div class="row clearfix">
 				<div class="sticky_true">
 					<div class="c_head clearfix">
-						<nav>
-							<ul class="sf-menu">
-								<li class="current colordefault home_class"><a href="{% url 'index'%}"><i class="icon-home"></i></a>
-
-								</li>
-
-								<li class="color2"><a href="{% url 'gas'%}">GAS&OIL</a>
-									<ul class="col4 mega">
-
-									</ul>
-								</li>
-								<li class="color3"><a href="{% url 'cripto'%}">ECONOMY </a>
-									<ul class="col4 mega">
-
-									</ul>
-								</li>
-								<li class="color4"><a href="{% url 'enorgy'%}">ENERGY </a>
-									<ul class="col4 mega">
 
 
-									</ul>
-								</li>
 
-								<li class="color6"><a href="{% url 'tech'%}">Technology</a></li>
+						
 
-								<li class="color6"><a href="{% url 'meo'%}">MEO PICS </a></li>
-									<li class="color3"><a href="{% url 'tech'%}">AR/EN </a></li>
+							<nav>
+								<ul class="sf-menu">
+									<li class="current colordefault home_class"><a href="{% url 'index'%}"><i class="icon-home"></i></a>
 
-							</ul><!-- /menu -->
+									</li>
 
-						</nav><!-- /nav -->
+									<li class="color2"><a href="{% url 'gas'%}">GAS&OIL</a>
+										<ul class="col4 mega">
+
+										</ul>
+									</li>
+									<li class="color3"><a href="{% url 'cripto'%}">ECONOMY </a>
+										<ul class="col4 mega">
+
+										</ul>
+									</li>
+									<li class="color4"><a href="{% url 'enorgy'%}">ENERGY </a>
+										<ul class="col4 mega">
+
+
+										</ul>
+									</li>
+
+									<li class="color6"><a href="{% url 'tech'%}">Technology</a></li>
+
+									<li class="color6"><a href="{% url 'meo'%}">MEO Channel </a></li>
+
+										<li class="color6"><a href="www.middleeastoil.net/ar">AR/EN </a></li>
+
+								</ul><!-- /menu -->
+
+							</nav><!-- /nav -->
+
 
 						<div class="right_icons">
-							<a class="random_post bottomtip" href="www.facebook.com" title=""><i class="fa fa-facebook"></i></a>
-								<a class="random_post bottomtip" href="www.youtube.com" title=""><i class="fa fa-youtube"></i></a>
-									<a class="random_post bottomtip" href="www.twitter.com" title=""><i class="fa fa-twitter"></i></a>
+							<a class="random_post bottomtip" href="www.facebook.com/middleeastoil.net" title=""><i class="fa fa-facebook"></i></a>
+								<a class="random_post bottomtip" href="https://www.youtube.com/channel/UCg6PYIAN4wTuuhNn_y4yMvQ" title=""><i class="fa fa-youtube"></i></a>
+									<a class="random_post bottomtip" href="https://twitter.com/middleeastoil" title=""><i class="fa fa-twitter"></i></a>
 										<a class="random_post bottomtip" href="www.rss.com" title=""><i class="fa fa-rss"></i></a>
+						<div class="search">
 
-							<div class="search">
-								<div class="search_icon"><i class="fa-search"></i></div>
-								<div class="s_form">
-									<form action="search_result.html" id="search" method="get">
-										<input id="inputhead" name="search" type="text" onFocus="if (this.value=='Start Searching...') this.value = '';" onBlur="if (this.value=='') this.value = 'Start Searching...';" value="Start Searching..." placeholder="Start Searching ...">
-										<button type="submit"><i class="fa-search"></i></button>
-									</form><!-- /form -->
-								</div><!-- /s form -->
-							</div><!-- /search -->
-						</div><!-- /right icons -->
-					</div><!-- /c head -->
-				</div><!-- /sticky -->
-			</div><!-- /row -->
-		</header><!-- /header -->
+						<div class="s_form">
+
+						</div>
+						</div>
+						</div>
+						</div>
+						</div>
+						</div>
+						</header>
+
+
 
 
 
@@ -262,7 +270,7 @@
 
 						<div class="posts_block mbf clearfix">
 							<div class="title color5">
-								<h4>Gas&Oil</h4>
+								<a href="{% url 'gas'%}"><h4>Gas&Oil</h4></a>
 								<a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
 							</div><!-- /title bar -->
 
@@ -299,7 +307,7 @@
 
 						<div class="posts_block mbf clearfix">
 							<div class="title color1">
-								<h4>Criptocurrency</h4>
+								<a href="{% url 'cripto'%}"><h4>ECONOMY</h4></a>
 								<a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
 							</div>
 
@@ -352,7 +360,7 @@
 
 						<div class="posts_block mbf clearfix">
 							<div class="title color1">
-								<h4>Currency</h4>
+								<a href="{% url 'enorgy'%}"><h4>ENERGY</h4></a>
 								<a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
 							</div>
 
@@ -405,7 +413,7 @@
 
 						<div class="posts_block mbf clearfix">
 							<div class="title color1">
-								<h4>MEO Channel</h4>
+								<a href="{% url 'meo'%}"></a><h4>MEO Channel</h4>
 								<a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
 							</div>
 
@@ -460,7 +468,7 @@
 
 						<div class="posts_block mbf clearfix">
 							<div class="title color3">
-								<h4>Technology</h4>
+								<a href="{% url 'tech'%}"><h4>Technology</h4></a>
 								<a href="#" class="feed toptip" title="People RSS Feed"><i class="icon-feed"></i></a>
 							</div>
 
@@ -537,24 +545,8 @@
 						</div><!-- widget -->
 
 						<div class="widget">
-							<div class="title"><h4>Random Posts</h4></div>
-							<div class="relative float-shadow mb">
-								<a href="#"><img src="{% static 'images/assets/r_1.jpg'%}" alt=""></a>
-								<div class="r_content">
-									<a class="cat color5" href="#" title="View all posts under Music">Oil&Gas</a>
-									<div class="r_title"><a href="#">Oil prices are collapsing after Saudi Arabia sends ominous signal</a></div>
-								</div>
-							</div><!-- relative -->
-
-
-
-							<div class="relative float-shadow mb">
-								<a href="#"><img src="{% static 'images/assets/r_3.jpg'%}" alt=""></a>
-								<div class="r_content">
-									<a class="cat color2" href="#" title="View all posts under Travel">Oil&Gas</a>
-									<div class="r_title"><a href="#">COVID-19 Forces Libyan Oil Companies To Halt Operations</a></div>
-								</div>
-							</div><!-- relative -->
+							<div class="title"><h4>twitter</h4></div>
+						<a class="twitter-timeline" data-height="700" href="https://twitter.com/middleeastoil?ref_src=twsrc%5Etfw">Tweets by middleeastoil</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 						</div><!-- widget -->
 
 

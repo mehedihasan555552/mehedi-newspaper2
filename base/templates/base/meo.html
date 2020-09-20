@@ -100,7 +100,7 @@
 
 												</ul>
 											</li>
-											<li class="color4"><a href="{% url 'cripto'%}">ENERGY </a>
+											<li class="color4"><a href="{% url 'enorgy'%}">ENERGY </a>
 												<ul class="col4 mega">
 
 
@@ -109,54 +109,54 @@
 
 											<li class="color6"><a href="{% url 'tech'%}">Technology</a></li>
 
-											<li class="color6"><a href="{% url 'meo'%}">MEO PICS </a></li>
-												<li class="color3"><a href="{% url 'tech'%}">AR/EN </a></li>
+											<li class="color6"><a href="{% url 'meo'%}">MEO Channel </a></li>
+
+												<li class="color6"><a href="www.middleeastoil.net/ar">AR/EN </a></li>
 
 										</ul><!-- /menu -->
 
 									</nav><!-- /nav -->
 
-						<div class="right_icons">
-							<a class="random_post bottomtip" href="#" title="Random Post"><i class="icon-media-shuffle"></i></a><!-- /random post -->
+									<div class="right_icons">
+										<a class="random_post bottomtip" href="www.facebook.com/middleeastoil.net" title=""><i class="fa fa-facebook"></i></a>
+											<a class="random_post bottomtip" href="https://www.youtube.com/channel/UCg6PYIAN4wTuuhNn_y4yMvQ" title=""><i class="fa fa-youtube"></i></a>
+												<a class="random_post bottomtip" href="https://twitter.com/middleeastoil" title=""><i class="fa fa-twitter"></i></a>
+													<a class="random_post bottomtip" href="www.rss.com" title=""><i class="fa fa-rss"></i></a>
+									<div class="search">
 
-							<div class="search">
-								<div class="search_icon"><i class="fa-search"></i></div>
-								<div class="s_form">
-									<form action="search_result.html" id="search" method="get">
-										<input id="inputhead" name="search" type="text" onfocus="if (this.value=='Start Searching...') this.value = '';" onblur="if (this.value=='') this.value = 'Start Searching...';" value="Start Searching..." placeholder="Start Searching ...">
-										<button type="submit"><i class="fa-search"></i></button>
-									</form><!-- /form -->
-								</div><!-- /s form -->
-							</div><!-- /search -->
-						</div><!-- /right icons -->
-					</div><!-- /c head -->
-				</div><!-- /sticky -->
-			</div><!-- /row -->
-		</header><!-- /header -->
+									<div class="s_form">
+
+									</div>
+									</div>
+									</div>
+									</div>
+									</div>
+									</div>
+									</header>
 
 		<div class="page-content">
 			<div class="row clearfix">
 				<div class="grid_9 alpha">
 					<div class="grid_8 alpha posts">
-						<div class="title colordefault"><h4>Posts by category " MEO "</h4></div>
+						<div class="title colordefault"><h4>Posts by category " MEO CHANNEL "</h4></div>
 
-					<!-- post -->
-						{% for post in gass %}
-						<div class="post_day mbf clearfix">
-							<div class="grid_6 alpha relative">
-								{% video post.video '100% x 50%' %}
-							</div><!-- /grid6 alpha -->
-							<div class="grid_6 omega">
-								<div class="post_day_content">
-									<h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
-									<div class="meta mb"> {{post.date_posted}}   <a href=""></a> </div>
-									<p> {{post.content|truncatewords:50|safe}} </p>
-								</div><!-- /post content -->
-							</div><!-- /grid6 omega -->
+						<!-- post -->
+						    {% for post in gass %}
+						    <div class="post_day mbf clearfix">
+						        <div class="grid_6 alpha relative">
+						            {% video post.video '100% x 50%' %}
+						        </div><!-- /grid6 alpha -->
+						        <div class="grid_6 omega">
+						            <div class="post_day_content">
+						                <h3> <a href="">{{post.title}}</a> </h3>
+						                <div class="meta mb"> {{post.date_posted}}   <a href=""></a> </div>
+						                <p> {{post.content|truncatewords:50|safe}} </p>
+						            </div><!-- /post content -->
+						        </div><!-- /grid6 omega -->
 
-						</div><!-- /post day -->
-							{% endfor %}
-					<!-- /post -->
+						    </div><!-- /post day -->
+						        {% endfor %}
+						<!-- /post -->
 
 
 
@@ -225,45 +225,15 @@
 						</div><!-- widget -->
 
 						<div class="widget">
-							<div class="title"><h4>Popular Tags</h4></div>
-							<div class="tags">
-								<a href="#" title="17 topic"> corporate </a>
-								<a href="#" title="44 topic"> theme </a>
-								<a href="#" title="10 topic"> css3 </a>
-								<a href="#" title="2 topic"> premium </a>
-								<a href="#" title="29 topic"> html5 </a>
-								<a href="#" title="4 topic"> business </a>
-								<a href="#" title="20 topic"> all purpose </a>
-								<a href="#" title="14 topic"> jquery </a>
-								<a href="#" title="1 topic"> muse template </a>
-								<a href="#" title="4 topic"> minimalist </a>
-							</div>
+
+
 						</div><!-- widget -->
 
 					</div><!-- end grid9 -->
 				</div><!-- end grid9 -->
 
 				<div class="grid_3 omega sidebar sidebar_a">
-					<div class="widget">
-						<ul class="counter clearfix">
-							<li class="twitter">
-								<a href="#"><i class="fa fa-twitter"></i></a>
-								<span> 2545 <br> Followes </span>
-							</li>
-							<li class="facebook">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<span> 1317 <br> Likes </span>
-							</li>
-							<li class="dribbble">
-								<a href="#"><i class="fa fa-dribbble"></i></a>
-								<span> 325 <br> Followes </span>
-							</li>
-							<li class="rss">
-								<a href="#"><i class="fa fa-rss"></i></a>
-								<span> 27 <br> Subscribers </span>
-							</li>
-						</ul>
-					</div><!-- widget -->
+
 
 					<div class="widget">
 						<div class="ads_widget clearfix">
@@ -274,56 +244,14 @@
 					</div><!-- widget -->
 
 					<div class="widget">
-						<div class="title"><h4>What's Hot</h4></div>
+
 
 							<div class="small_slider_hots owl-carousel owl-theme">
 								<div class="item clearfix">
-									<ul class="small_posts">
-										<li class="clearfix">
-											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb13.jpg" alt="#"><span>1</span></a>
-											<h3><a href="single_post.html">What is the worst could be the worst?</a></h3>
-											<div class="meta mb"> <a class="cat color1" href="#" title="View all posts under Entertainment">Entertainment</a><span class="post_rating" href="#" title="Rating">8.89</span> </div>
-										</li>
-										<li class="clearfix">
-											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb12.jpg" alt="#"><span>2</span></a>
-											<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-											<div class="meta mb"> <a class="cat color3" href="#" title="View all posts under News">News</a><span class="post_rating" href="#" title="Rating">8.1</span> </div>
-										</li>
-										<li class="clearfix">
-											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb11.jpg" alt="#"><span>3</span></a>
-											<h3><a href="single_post.html">Paul Thomson on post with SoundCloud</a></h3>
-											<div class="meta mb"> <a class="cat color4" href="#" title="View all posts under Sports">Sports</a><span class="post_rating" href="#" title="Rating">7.95</span> </div>
-										</li>
-										<li class="clearfix">
-											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb10.jpg" alt="#"><span>4</span></a>
-											<h3><a href="single_post.html">For the days of peace and warmth</a></h3>
-											<div class="meta mb"> <a class="cat color5" href="#" title="View all posts under People">People</a><span class="post_rating" href="#" title="Rating">7.5</span> </div>
-										</li>
-									</ul>
+
 								</div>
 								<div class="item clearfix">
-									<ul class="small_posts">
-										<li class="clearfix">
-											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb9.jpg" alt="#"><span>5</span></a>
-											<h3><a href="single_post.html">What worst could be the worst?</a></h3>
-											<div class="meta mb"> <a class="cat color6" href="#" title="View all posts under People">People</a><span class="post_rating" href="#" title="Rating">7</span> </div>
-										</li>
-										<li class="clearfix">
-											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb8.jpg" alt="#"><span>6</span></a>
-											<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-											<div class="meta mb"> <a class="cat color7" href="#" title="View all posts under TV">TV</a><span class="post_rating" href="#" title="Rating">5.89</span> </div>
-										</li>
-										<li class="clearfix">
-											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb7.jpg" alt="#"><span>7</span></a>
-											<h3><a href="single_post.html">Paul Thomson on post with SoundCloud</a></h3>
-											<div class="meta mb"> <a class="cat color8" href="#" title="View all posts under Society">Society</a><span class="post_rating" href="#" title="Rating">5.5</span> </div>
-										</li>
-										<li class="clearfix">
-											<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb6.jpg" alt="#"><span>8</span></a>
-											<h3><a href="single_post.html">For the days of peace and warmth</a></h3>
-											<div class="meta mb"> <a class="cat color3" href="#" title="View all posts under Health">Health</a><span class="post_rating" href="#" title="Rating">4</span> </div>
-										</li>
-									</ul>
+
 								</div>
 							</div><!-- /slides -->
 					</div><!-- /widget -->
