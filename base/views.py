@@ -7,8 +7,9 @@ from django.utils import timezone
 
 def index(request):
     l=LatestPost.objects.all().order_by('-date_posted')[:1]
-    ll=LatestPost.objects.all().order_by('-date_posted')[::-3]
-    posts=LatestPost.objects.all().order_by('-date_posted')[:6]
+    ll=LatestPost.objects.all().order_by('-date_posted')[1:2]
+    lll=LatestPost.objects.all().order_by('-date_posted').reverse()[:1]
+    posts=LatestPost.objects.all().order_by('-date_posted')[:4]
     bb=LatestPost.objects.all().order_by('-date_posted')[:5]
     if request.method == 'GET':
         category=['1']
@@ -51,7 +52,7 @@ def index(request):
 
 
 
-    context={'gass':gass,'p':p,'c':c,'d':d,'e':e,'video':video,'posts':posts,'l':l,'ll':ll,'bb':bb}
+    context={'gass':gass,'p':p,'c':c,'d':d,'e':e,'video':video,'posts':posts,'l':l,'ll':ll,'bb':bb,'lll':lll}
     return render(request, 'base/index.html',context)
 
 

@@ -198,19 +198,19 @@
 
 										<h3><a href="{% url 'latestpost' post.id %}">{{post.title}}</a></h3>
 									</div>
-									<a href="{% url 'latestpost' post.id %}"><img style="width:500px;height:200px;"src="{{post.post_pic.url}}"  alt=""></a>
+									<a href="{% url 'latestpost' post.id %}"><img style="width:500px;height:200px;" src="{{post.post_pic.url}}"  alt=""></a>
 								</div><!-- /half -->
 
 						     {% endfor %}
 
-                 	 {% for post in header2 %}
+                 	 {% for post in lll %}
 								<div class="half">
 									<div class="slide_details">
-										<a class="cat color6" href="{% url 'header2' post.id %}" title="View all posts under TV">{{post.category}}</a>
+										<a class="cat color6" href="{% url 'latestpost' post.id %}" title="View all posts under TV">{{post.category}}</a>
 
-										<h3><a href="{% url 'header2' post.id %}">{{post.title}}</a></h3>
+										<h3><a href="{% url 'latestpost' post.id %}">{{post.title}}</a></h3>
 									</div>
-									<a href="{% url 'header2' post.id %}"><img style="width:500px;height:200px;" src="{{post.post_pic.url}}"  alt="" class="hhh"></a>
+									<a href="{% url 'latestpost' post.id %}"><img style="width:500px;height:200px;" src="{{post.post_pic.url}}"  alt="" class="hhh"></a>
 								</div><!-- /half -->
 								 {% endfor %}
 							</div><!-- /slide -->
@@ -332,23 +332,7 @@
 										</ul>
 									</div>
 									<div class="item clearfix">
-										<ul class="small_posts">
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb11.jpg'%}" alt="#"></a>
-												<h3><a href="#">What worst could be the worst?</a></h3>
-												<div class="meta mb"> 5 hours ago    /    <a href="#">1 comments</a> </div>
-											</li>
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb12.jpg'%}" alt="#"></a>
-												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 1 days ago    /    <a href="#">5 comments</a> </div>
-											</li>
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb6.jpg'%}" alt="#"></a>
-												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 4 days ago    /    <a href="#">5 comments</a> </div>
-											</li>
-										</ul>
+
 									</div>
 								</div>
 							</div><!-- grid6 omega -->
@@ -385,23 +369,7 @@
 										</ul>
 									</div>
 									<div class="item clearfix">
-										<ul class="small_posts">
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb11.jpg'%}" alt="#"></a>
-												<h3><a href="#">What worst could be the worst?</a></h3>
-												<div class="meta mb"> 5 hours ago    /    <a href="#">1 comments</a> </div>
-											</li>
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb12.jpg'%}" alt="#"></a>
-												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 1 days ago    /    <a href="#">5 comments</a> </div>
-											</li>
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb6.jpg'%}" alt="#"></a>
-												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 4 days ago    /    <a href="#">5 comments</a> </div>
-											</li>
-										</ul>
+
 									</div>
 								</div>
 							</div><!-- grid6 omega -->
@@ -441,23 +409,7 @@
 										</ul>
 									</div>
 									<div class="item clearfix">
-										<ul class="small_posts">
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb11.jpg'%}" alt="#"></a>
-												<h3><a href="#">What worst could be the worst?</a></h3>
-												<div class="meta mb"> 5 hours ago    /    <a href="#">1 comments</a> </div>
-											</li>
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb12.jpg'%}" alt="#"></a>
-												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 1 days ago    /    <a href="#">5 comments</a> </div>
-											</li>
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb6.jpg'%}" alt="#"></a>
-												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 4 days ago    /    <a href="#">5 comments</a> </div>
-											</li>
-										</ul>
+
 									</div>
 								</div>
 							</div><!-- grid6 omega -->
@@ -487,47 +439,10 @@
 							<div class="grid_6 omega">
 								<div class="small_slider_travel owl-carousel owl-theme">
 									<div class="item clearfix">
-										<ul class="small_posts">
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb2.jpg'%}" alt="#"></a>
-												<h3><a href="#">What worst could be the worst?</a></h3>
-												<div class="meta mb"> 5 hours ago    /    <a href="#">1 comments</a> </div>
-											</li>
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb8.jpg'%}" alt="#"></a>
-												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 1 days ago    /    <a href="#">5 comments</a> </div>
-											</li>
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb1.jpg'%}" alt="#"></a>
-												<h3><a href="#">Paul Thomson on post with SoundCloud</a></h3>
-												<div class="meta mb"> 3 days ago    /    <a href="#">14 comments</a> </div>
-											</li>
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb10.jpg'%}" alt="#"></a>
-												<h3><a href="#">For the days of peace and warmth</a></h3>
-												<div class="meta mb"> 3 days ago    /    <a href="#">14 comments</a> </div>
-											</li>
-										</ul>
+
 									</div>
 									<div class="item clearfix">
-										<ul class="small_posts">
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb4.jpg'%}" alt="#"></a>
-												<h3><a href="#">What worst could be the worst?</a></h3>
-												<div class="meta mb"> 5 hours ago    /    <a href="#">1 comments</a> </div>
-											</li>
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb3.jpg'%}" alt="#"></a>
-												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 1 days ago    /    <a href="#">5 comments</a> </div>
-											</li>
-											<li class="clearfix">
-												<a class="s_thumb float-shadow" href="#"><img width="70" height="70" src="{% static 'images/assets/thumb9.jpg'%}" alt="#"></a>
-												<h3><a href="#">Praesent ipsum adipiscing mi eget ipsum</a></h3>
-												<div class="meta mb"> 4 days ago    /    <a href="#">5 comments</a> </div>
-											</li>
-										</ul>
+
 									</div>
 								</div>
 							</div><!-- grid6 omega -->
