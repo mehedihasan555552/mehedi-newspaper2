@@ -8,31 +8,31 @@ from django.utils import timezone
 def index(request):
     l=LatestPost.objects.all().order_by('-date_posted')[:1]
     ll=LatestPost.objects.all().order_by('-date_posted')[1:2]
-    lll=LatestPost.objects.all().order_by('-date_posted').reverse()[:1]
+    lll=LatestPost.objects.all().order_by('date_posted').reverse()[1:3]
     posts=LatestPost.objects.all().order_by('-date_posted')[:4]
     bb=LatestPost.objects.all().order_by('-date_posted')[:5]
     if request.method == 'GET':
         category=['1']
-        gass=LatestPost.objects.order_by('-date_posted').filter(category=category)
+        gass=LatestPost.objects.order_by('-date_posted').filter(category=category)[:2]
 
     try:
         if request.method =='GET':
             category=['2']
-            p=LatestPost.objects.order_by('-date_posted').filter(category=category)
+            p=LatestPost.objects.order_by('-date_posted').filter(category=category)[:2]
     except:
         pass
 
     try:
         if request.method =='GET':
             category=['3']
-            c=LatestPost.objects.order_by('-date_posted').filter(category=category)
+            c=LatestPost.objects.order_by('-date_posted').filter(category=category)[:2]
     except:
         pass
 
     try:
         if request.method =='GET':
             category=['4']
-            d=LatestPost.objects.order_by('-date_posted').filter(category=category)
+            d=LatestPost.objects.order_by('-date_posted').filter(category=category)[:2]
     except:
         pass
 
@@ -40,13 +40,13 @@ def index(request):
     try:
         if request.method =='GET':
             category=['5']
-            e=LatestPost.objects.order_by('-date_posted').filter(category=category)
+            e=LatestPost.objects.order_by('-date_posted').filter(category=category)[:2]
     except:
         pass
 
     try:
         if request.method =='GET':
-            video=MEOCHANNEL.objects.all().order_by('-date_posted')
+            video=MEOCHANNEL.objects.all().order_by('-date_posted')[:2]
     except:
         pass
 
