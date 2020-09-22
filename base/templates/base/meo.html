@@ -46,13 +46,10 @@
 						</div><!-- /lang -->
 
 						<div class="social social_head">
-							<a href="#" class="bottomtip" title="Twitter"><i class="fa-twitter"></i></a>
-							<a href="#" class="bottomtip" title="Facebook"><i class="fa-facebook"></i></a>
-							<a href="#" class="bottomtip" title="Google Plus"><i class="fa-google-plus"></i></a>
-							<a href="#" class="bottomtip" title="Linkedin"><i class="fa-linkedin"></i></a>
-							<a href="#" class="bottomtip" title="Github"><i class="fa-github"></i></a>
-							<a href="#" class="bottomtip" title="instagram"><i class="fa-instagram"></i></a>
-							<a href="#" class="bottomtip" title="Dribbble"><i class="fa-dribbble"></i></a>
+							<a href="www.facebook.com/middleeastoil.net" class="bottomtip" title="Facebook"><i class="fa-facebook"></i></a>
+							<a  href="https://www.youtube.com/channel/UCg6PYIAN4wTuuhNn_y4yMvQ" class="bottomtip" title="Linkedin"><i class="fa-youtube"></i></a>
+              	<a href="https://twitter.com/middleeastoil"  class="bottomtip" title="Twitter"><i class="fa-twitter"></i></a>
+							<a href="www.rss.com" class="bottomtip" title="Google Plus"><i class="fa-rss"></i></a>
 						</div><!-- /social -->
 
 						<span id="date_time"></span><!-- /date -->
@@ -138,7 +135,7 @@
 			<div class="row clearfix">
 				<div class="grid_9 alpha">
 					<div class="grid_8 alpha posts">
-						<div class="title colordefault"><h4>Posts by category " MEO CHANNEL "</h4></div>
+						<div class="title colordefault"><h4> MEO CHANNEL </h4></div>
 
 						<!-- post -->
 						    {% for post in gass %}
@@ -175,45 +172,18 @@
 					<div class="grid_4 omega sidebar sidebar_b">
 						<div class="widget">
 							<div class="title"><h4>New Video</h4></div>
-							<iframe src="http://player.vimeo.com/video/13897659?color=E84A4A" height="180"></iframe><a href="http://vimeo.com/13897659">Iconic Poster design</a>
+							{% for post in video %}
+							{% video post.video '100% x 50%' %}
+							 {% endfor %}</div><!-- widget -->
+
+						<div class="widget">
+							<div class="title"><h4>twitter</h4></div>
+						<a class="twitter-timeline" data-height="300" href="https://twitter.com/middleeastoil?ref_src=twsrc%5Etfw">Tweets by middleeastoil</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 						</div><!-- widget -->
 
 						<div class="widget">
-							<div id="calendar_wrap"><table id="wp-calendar">
-								<caption>January 2020</caption>
-									<thead>
-										<tr>
-											<th scope="col" title="Monday">M</th>
-											<th scope="col" title="Tuesday">T</th>
-											<th scope="col" title="Wednesday">W</th>
-											<th scope="col" title="Thursday">T</th>
-											<th scope="col" title="Friday">F</th>
-											<th scope="col" title="Saturday">S</th>
-											<th scope="col" title="Sunday">S</th>
-										</tr>
-									</thead>
-
-									<tfoot>
-										<tr>
-											<td colspan="3" id="prev"><a href="#" title="View posts for December 2013">« Dec</a></td>
-											<td class="pad">&nbsp;</td>
-											<td colspan="3" id="next" class="pad">&nbsp;</td>
-										</tr>
-									</tfoot>
-
-									<tbody>
-										<tr><td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-										<tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
-										<tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td id="today">18</td><td>19</td></tr>
-										<tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
-										<tr><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td class="pad" colspan="2">&nbsp;</td></tr>
-									</tbody>
-								</table>
-							</div>
-						</div><!-- widget -->
-
-						<div class="widget">
-							<div class="title"><h4>Random Posts</h4></div>
+							
 
 
 

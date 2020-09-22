@@ -28,6 +28,9 @@ class LatestPost(models.Model):
 
 
 
+
+
+
 class MEOCHANNEL(models.Model):
 
     title = models.CharField(max_length=100)

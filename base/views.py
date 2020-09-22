@@ -9,7 +9,7 @@ def index(request):
     l=LatestPost.objects.all().order_by('-date_posted')[:1]
     ll=LatestPost.objects.all().order_by('-date_posted')[1:2]
     lll=LatestPost.objects.all().order_by('date_posted').reverse()[1:3]
-    posts=LatestPost.objects.all().order_by('-date_posted')[:4]
+    posts=LatestPost.objects.all().order_by('date_posted').reverse()[3:7]
     bb=LatestPost.objects.all().order_by('-date_posted')[:5]
     if request.method == 'GET':
         category=['1']
@@ -59,36 +59,44 @@ def index(request):
 def Gas(request):
     category=['1']
     gass=LatestPost.objects.order_by('-date_posted').filter(category=category)
+    video=MEOCHANNEL.objects.all().order_by('-date_posted')[:1]
 
-    context={'gass':gass}
+    context={'gass':gass,'video':video}
     return render(request, 'base/gas.html',context)
 
 
 def MEO(request):
     gass=MEOCHANNEL.objects.all().order_by('-date_posted')
+    video=MEOCHANNEL.objects.all().order_by('-date_posted')[:1]
 
-    context={'gass':gass}
+    context={'gass':gass,'video':video}
     return render(request, 'base/meo.html',context)
 
 
 def Cripto(request):
     category=['2']
     gass=LatestPost.objects.order_by('-date_posted').filter(category=category)
-    context={'gass':gass}
+    video=MEOCHANNEL.objects.all().order_by('-date_posted')[:1]
+
+    context={'gass':gass,'video':video}
     return render(request, 'base/economy.html',context)
 
 
 def Enorgy(request):
     category=['3']
     gass=LatestPost.objects.order_by('-date_posted').filter(category=category)
-    context={'gass':gass}
+    video=MEOCHANNEL.objects.all().order_by('-date_posted')[:1]
+
+    context={'gass':gass,'video':video}
     return render(request, 'base/enorgy.html',context)
 
 
 def Tech(request):
     category=['5']
     gass=LatestPost.objects.order_by('-date_posted').filter(category=category)
-    context={'gass':gass}
+    video=MEOCHANNEL.objects.all().order_by('-date_posted')[:1]
+
+    context={'gass':gass,'video':video}
     return render(request, 'base/tech.html',context)
 
 class LatestPostt(DetailView):
