@@ -1,0 +1,656 @@
+{% load static %}
+{% load embed_video_tags %}
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="en"><![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><!--<![endif]-->
+<head>
+	<title>Middle East Oil</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<!-- Seo Meta -->
+		<meta name="description" content="iPress - Responsive News/Blog/Magazine HTML5 Template">
+		<meta name="keywords" content="iPress, magazine, light, dark, themeforest, multi purpose, premium, unlimited, blog, news, AD, optimized">
+
+	<!-- Styles -->
+
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styles/icons.css'%}" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styles/animate.css'%}" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styles/responsive.css'%}" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styles/rtl.css'%}" media="screen" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
+
+	<!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}">
+  <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png'%}">
+
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EmulateIE8; IE=EDGE" />
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="layout" class="boxed">
+		<header id="header">
+			<div class="a_head">
+				<div class="row clearfix">
+					<div class="breaking_news righter">
+						<div class="freq_out">
+							<div class="freq"><div class="inner_f"></div><div id="layerBall"></div></div>
+						</div><!-- /freq -->
+            {% for post in posts %}
+
+
+						<ul id="js-news-rtl" class="js-hidden">
+
+                <li><a href="">{{post.title}}</a></li>
+
+						</ul><!-- /js news -->
+
+              {% endfor %}
+					</div><!-- /breaking news -->
+
+					<div class="right_bar">
+						<div class="lang">
+
+							<div class="more_lang">
+
+							</div><!-- /more lang -->
+						</div><!-- /lang -->
+
+						<div class="social social_head">
+							<a href="https://twitter.com/middleeastoil" class="bottomtip" title="Twitter"><i class="fa-twitter"></i></a>
+							<a href="https://www.facebook.com/middleeastoil.net" class="bottomtip" title="Facebook"><i class="fa-facebook"></i></a>
+							<a href="https://www.youtube.com/channel/UCg6PYIAN4wTuuhNn_y4yMvQ" class="bottomtip" title="Google Plus"><i class="fa-youtube"></i></a>
+							<a href="https://www.rss.com" class="bottomtip" title="Linkedin"><i class="fa-rss"></i></a>
+
+
+						</div><!-- /social -->
+
+						<span id="date_time"></span><!-- /date -->
+					</div><!-- /right bar -->
+				</div><!-- /row -->
+			</div><!-- /a head -->
+
+			<div class="b_head">
+				<div class="row clearfix">
+					<div class="logo">
+						<a href="{% url 'arobic:arindex'%}" title=""><img src="{% static 'images/logo.png'%}" alt=""></a>
+					</div><!-- /logo -->
+
+
+				</div><!-- /row -->
+			</div><!-- /b head -->
+
+			<div class="row clearfix">
+				<div class="sticky_true">
+					<div class="c_head clearfix">
+            <nav >
+              <ul class="sf-menu">
+                <li class="current colordefault home_class"><a href="{% url 'arobic:arindex'%}"><i class="icon-home"></i></a>
+
+                </li>
+
+                <li class="color2"><a href="{% url 'arobic:argas'%}">GAS&OIL</a>
+                  <ul class="col4 mega">
+
+                  </ul>
+                </li>
+                <li class="color3"><a href="{% url 'arobic:arcripto'%}">ECONOMY </a>
+                  <ul class="col4 mega">
+
+                  </ul>
+                </li>
+                <li class="color4"><a href="{% url 'arobic:arenorgy'%}">ENERGY </a>
+                  <ul class="col4 mega">
+
+
+                  </ul>
+                </li>
+
+                <li class="color6"><a href="{% url 'arobic:artech'%}">Technology</a></li>
+
+                <li class="color6"><a href="{% url 'arobic:armeo'%}">MEO Channel </a></li>
+
+                  <li class="color6"><a href="{% url 'index'%}">AR/EN </a></li>
+
+              </ul><!-- /menu -->
+
+            </nav><!-- /nav -->
+
+						<div class="right_icons">
+							<a class="random_post bottomtip" href="#" title="Random Post"><i class="icon-media-shuffle"></i></a><!-- /random post -->
+
+							<div class="search">
+
+								<div class="s_form">
+
+								</div><!-- /s form -->
+							</div><!-- /search -->
+						</div><!-- /right icons -->
+					</div><!-- /c head -->
+				</div><!-- /sticky -->
+			</div><!-- /row -->
+		</header><!-- /header -->
+
+
+
+
+
+    		<div class="page-content">
+    			<div class="row clearfix">
+    				<div class="grid_9 alpha">
+    					<div class="ipress_slider mbf">
+    						<div class="slider_a owl-carouseltheme">
+    							<!-- /slide -->
+
+    				     {% for post in l %}
+    							<div class="item clearfix">
+    								<div class="half">
+    									<div class="slide_details">
+    										<a class="cat color4" href="{% url 'arobic:arlatestpost' post.id %}" title="View all posts under Sports">{{ post.category }}</a>
+    										<span class="post_rating" href="#" title="Rating"><i class="fa fa-star"></i> 9.11</span>
+    										<h3><a href="{% url 'arobic:arlatestpost' post.id %}">{{post.title|truncatewords:7 }}</a></h3>
+    									</div>
+    									<a href="{% url 'arobic:arlatestpost' post.id %}"><img style="width:600px;height:400px;" src="{{post.post_pic.url}}" alt=""></a>
+    								</div><!-- /half -->
+
+    								   {% endfor %}
+
+
+    									 {% for post in lllll %}
+
+    								<div class="half">
+    									<div class="slide_details">
+    										<a class="cat color5" href="{% url 'arobic:arlatestpost' post.id %}" title="View all posts under Music">{{post.category}}</a>
+
+    										<h3><a href="{% url 'arobic:arlatestpost' post.id %}">{{post.title|truncatewords:7 }}</a></h3>
+    									</div>
+    									<a href="{% url 'arobic:arlatestpost' post.id %}"><img style="width:500px;height:200px;" src="{{post.post_pic.url}}"  alt=""></a>
+    								</div><!-- /half -->
+
+    						     {% endfor %}
+
+                     	 {% for post in lll %}
+    								<div class="half">
+    									<div class="slide_details">
+    										<a class="cat color6" href="{% url 'arobic:arlatestpost' post.id %}" title="View all posts under TV">{{post.category}}</a>
+
+    										<h3><a href="{% url 'arobic:arlatestpost' post.id %}">{{post.title|truncatewords:7 }}</a></h3>
+    									</div>
+    									<a href="{% url 'arobic:arlatestpost' post.id %}"><img style="width:500px;height:200px;" src="{{post.post_pic.url}}"  alt="" class="hhh"></a>
+    								</div><!-- /half -->
+    								 {% endfor %}
+    							</div><!-- /slide -->
+
+    						</div><!-- /slider -->
+    					</div><!-- /slider ipress -->
+
+
+
+
+
+
+					<div class="grid_8 alpha posts">
+
+
+
+            <div class="posts_block mbf clearfix">
+              <div class="title color5">
+                <h4>Latest Post </h4>
+                <a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
+              </div><!-- /title bar -->
+
+
+              {% for post in posts %}
+
+
+
+              <div class="grid_6 alpha">
+                <div class="mb float-shadow"><a href="{% url 'arobic:arlatestpost' post.id %}"><img style="width:400px;height:170px;" src="{{post.post_pic.url}}" alt=""></a></div>
+                <div class="post_m_content">
+                  <h3> <a href="{% url 'arobic:arlatestpost' post.id %}">{{post.title|truncatewords:7 }}</a> </h3>
+                  <div class="meta mb"> {{post.date_posted| date:"F d Y"}}   <a href="{% url 'arobic:arlatestpost' post.id %}"></a> </div>
+
+                   <p > {{ post.content|safe|truncatewords_html:9 }} </p>
+                </div><!-- post content -->
+              </div><!-- /grid6 omega -->
+
+              {% endfor %}
+
+              <div class="grid_6 omega">
+                <div class="small_slider_music owl-carousel owl-theme">
+                  <div class="item clearfix">
+                    <ul class="small_posts">
+
+                    </ul>
+                  </div>
+
+                </div><!-- /slides -->
+              </div><!-- grid6 omega -->
+            </div><!-- posts block Music -->
+
+            <div class="posts_block mbf clearfix">
+              <div class="title color3">
+                <a href="{% url 'arobic:argas'%}"><h4>Gas&Oil</h4></a>
+                <a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
+              </div><!-- /title bar -->
+
+
+
+                {% for post in gass %}
+
+
+              <div class="grid_6 alpha">
+                <div class="mb float-shadow"><a href="{% url 'arobic:arlatestpost' post.id %}"><img style="width:400px;height:170px;" src="{{post.post_pic.url}}" alt=""></a></div>
+                <div class="post_m_content">
+                  <h3> <a href="{% url 'arobic:arlatestpost' post.id %}">{{post.title|truncatewords:7 }}</a> </h3>
+                  <div class="meta mb"> {{post.date_posted| date:"F d Y"}}   <a href="{% url 'arobic:arlatestpost' post.id %}"></a> </div>
+                  <p> {{ post.content|safe|truncatewords_html:9 }} </p>
+                </div><!-- post content -->
+              </div><!-- /grid6 omega -->
+
+              {% endfor %}
+
+
+              <div class="grid_6 omega">
+                <div class="small_slider_music owl-carousel owl-theme">
+                  <div class="item clearfix">
+                    <ul class="small_posts">
+
+                    </ul>
+                  </div>
+
+                </div><!-- /slides -->
+              </div><!-- grid6 omega -->
+            </div><!-- posts block Music -->
+
+            <div class="posts_block mbf clearfix">
+              <div class="title color1">
+                <a href="{% url 'arobic:arcripto'%}"><h4>ECONOMY</h4></a>
+                <a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
+              </div>
+
+                {% for post in p %}
+
+              <div class="grid_6 alpha">
+                <div class="mb float-shadow"><a href="{% url 'arobic:arlatestpost' post.id %}"><img style="width:400px;height:170px;" src="{{post.post_pic.url}}" alt=""></a></div>
+                <div class="post_m_content">
+                  <h3> <a href="{% url 'arobic:arlatestpost' post.id %}">{{post.title|truncatewords:7 }}</a> </h3>
+                  <div class="meta mb"> {{post.date_posted| date:"F d Y"}}   <a href="{% url 'arobic:arlatestpost' post.id %}"></a> </div>
+                   <p> {{ post.content|safe|truncatewords_html:9 }} </p>
+                </div><!-- post content -->
+              </div><!-- grid6 omega -->
+
+                {% endfor %}
+
+              <div class="grid_6 omega">
+                <div class="small_slider_travel owl-carousel owl-theme">
+                  <div class="item clearfix">
+                    <ul class="small_posts">
+
+                    </ul>
+                  </div>
+                  <div class="item clearfix">
+
+                  </div>
+                </div>
+              </div><!-- grid6 omega -->
+            </div><!-- posts block Travel -->
+
+
+
+
+
+
+
+            						<div class="posts_block mbf clearfix">
+            							<div class="title color1">
+            								<a href="{% url 'arobic:arenorgy'%}"><h4>ENERGY</h4></a>
+            								<a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
+            							</div>
+
+            								{% for post in c %}
+
+            							<div class="grid_6 alpha">
+            								<div class="mb float-shadow"><a href="{% url 'arobic:arlatestpost' post.id %}"><img style="width:400px;height:170px;" src="{{post.post_pic.url}}" alt=""></a></div>
+            								<div class="post_m_content">
+            									<h3> <a href="{% url 'arobic:arlatestpost' post.id %}">{{post.title|truncatewords:7 }}</a> </h3>
+            									<div class="meta mb"> {{post.date_posted| date:"F d Y"}}   <a href="{% url 'arobic:arlatestpost' post.id %}"></a> </div>
+                              <p> {{ post.content|safe|truncatewords_html:9 }} </p>
+            								</div><!-- post content -->
+            							</div><!-- grid6 omega -->
+
+            								{% endfor %}
+
+            							<div class="grid_6 omega">
+            								<div class="small_slider_travel owl-carousel owl-theme">
+            									<div class="item clearfix">
+            										<ul class="small_posts">
+
+            										</ul>
+            									</div>
+            									<div class="item clearfix">
+
+            									</div>
+            								</div>
+            							</div><!-- grid6 omega -->
+            						</div><!-- posts block Travel -->
+
+
+
+
+
+
+                        <div class="posts_block mbf clearfix">
+                          <div class="title color1">
+                            <a href="{% url 'arobic:armeo'%}"></a><h4>MEO Channel</h4>
+                            <a href="#" class="feed toptip" title="RSS Feed"><i class="icon-feed"></i></a>
+                          </div>
+
+                            {% for post in video %}
+
+                          <div class="grid_6 alpha">
+                            <div class="">
+                            {% video post.video '100% x 50%' %}
+
+                            </div>
+                            <div class="post_m_content">
+                              <h3> <a href="">{{post.title|truncatewords:7 }}</a> </h3>
+                              <div class="meta mb"> {{post.date_posted| date:"F d Y"}}   <a href=""></a> </div>
+
+                            </div><!-- post content -->
+                          </div><!-- grid6 omega -->
+
+                            {% endfor %}
+
+                          <div class="grid_6 omega">
+                            <div class="small_slider_travel owl-carousel owl-theme">
+                              <div class="item clearfix">
+                                <ul class="small_posts">
+
+                                </ul>
+                              </div>
+                              <div class="item clearfix">
+
+                              </div>
+                            </div>
+                          </div><!-- grid6 omega -->
+                        </div><!-- posts block Travel -->
+
+
+
+                        <div class="posts_block mbf clearfix">
+                          <div class="title color3">
+                            <a href="{% url 'arobic:artech'%}"><h4>Technology</h4></a>
+                            <a href="#" class="feed toptip" title="People RSS Feed"><i class="icon-feed"></i></a>
+                          </div>
+
+                          {% for post in e %}
+                          <div class="grid_6 alpha">
+                            <div class="mb float-shadow"><a href="{% url 'arobic:arlatestpost' post.id %}"><img style="width:400px;height:170px;" src="{{post.post_pic.url}}" alt=""></a></div>
+                            <div class="post_m_content">
+                              <h3> <a href="{% url 'arobic:arlatestpost' post.id %}">{{post.title|truncatewords:7 }}</a> </h3>
+                              <div class="meta mb">{{post.date_posted| date:"F d Y"}}   <a href="{% url 'arobic:arlatestpost' post.id %}"></a> </div>
+                              <p> {{ post.content|safe|truncatewords_html:9 }} </p>
+                            </div><!-- post content -->
+                          </div><!-- grid6 omega -->
+
+                          {% endfor %}
+
+                          <div class="grid_6 omega">
+                            <div class="small_slider_travel owl-carousel owl-theme">
+                              <div class="item clearfix">
+
+                              </div>
+                              <div class="item clearfix">
+
+                              </div>
+                            </div>
+                          </div><!-- grid6 omega -->
+                        </div><!-- posts block People -->
+
+
+
+
+
+
+
+
+					</div><!-- end grid8 -->
+
+					<div class="grid_4 omega sidebar sidebar_b">
+						<div class="widget">
+							<div class="title"><h4>New Video</h4></div>
+
+              {% for post in video1 %}
+              {% video post.video '100% x 50%' %}
+                {% endfor %}
+
+            </div><!-- widget -->
+
+						<div class="widget">
+
+
+
+
+              <div class="title"><h4>MiddleEastOil Stocks</h4></div>
+
+
+            <script type="text/javascript" src="https://www.oil-price.net/COMMODITIES/gen.php?lang=en"> </script>
+             <noscript> To get <a href="http://www.oil-price.net/dashboard.php?lang=en#COMMODITIES">gold, oil and
+               commodity prices</a>, please enable Javascript.</noscript>
+
+                   <br><br><br><br>
+               <div class="">
+                 <script type="text/javascript" src="https://www.oil-price.net/widgets/brent_crude_price_large/gen.php?lang=en"> </script>
+                 <noscript> To get the BRENT <a href="http://www.oil-price.net/dashboard.php?lang=en#brent_crude_price_large">oil price</a>,
+                    please enable Javascript.</noscript>
+
+               </div>
+
+               <br><br><br><br>
+            <div class="">
+
+               <script type="text/javascript" src="https://www.gas-cost.net/widget.php?lang=en"> </script>
+               <noscript> To get <a href="http://www.gas-cost.net/dashboard.php?lang=en">gasoline price</a>, please enable Javascript.</noscript>
+
+                   </div>
+
+
+
+
+						</div><!-- widget -->
+
+						<div class="widget">
+
+
+
+
+						</div><!-- widget -->
+
+						<div class="widget">
+
+						</div><!-- widget -->
+
+						<div class="widget">
+							</div><!-- widget -->
+
+					</div><!-- end grid9 -->
+				</div><!-- end grid9 -->
+
+				<div class="grid_3 omega sidebar sidebar_a">
+					<div class="widget">
+
+              <div class="title"><h4>twitter</h4></div>
+
+
+
+
+          <a class="twitter-timeline" data-height="1300" href="https://twitter.com/middleeastoil?ref_src=twsrc%5Etfw">Tweets by middleeastoil</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+					</div><!-- widget -->
+
+					<div class="widget">
+
+					</div><!-- widget -->
+
+					<div class="widget">
+
+					</div><!-- /widget -->
+
+					<div class="widget">
+
+
+					</div><!-- /widget -->
+
+					<div class="widget">
+
+					</div><!-- widget -->
+
+					<div class="widget">
+
+					</div><!-- /widget -->
+
+				</div><!-- /grid3 sidebar A -->
+			</div><!-- /row -->
+		</div><!-- /end page content -->
+
+		<footer id="footer">
+			<div class="row clearfix">
+				<div class="grid_3">
+					<div class="widget">
+						<div class="title"><h4>About MiddleEastOil</h4></div>
+
+<p>Email:	<a href="contact.html">MiddleEastOil@gmail.com</a> </p>
+					</div><!-- /widget -->
+				</div><!-- /grid3 -->
+
+				<div class="grid_3">
+					<div class="widget">
+						<div class="title"><h4>Recent Posts</h4></div>
+						<ul class="small_posts">
+							<li class="clearfix">
+								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb4.jpg" alt="#"></a>
+								<h3><a href="single_post.html">What is the worst could be the worst?</a></h3>
+								<div class="meta mb"> 1 day ago  /  <a href="single_post.html">1 comment</a> </div>
+							</li>
+							<li class="clearfix">
+								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb5.jpg" alt="#"></a>
+								<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+								<div class="meta mb"> 3 days ago  /  <a href="single_post.html">3 comments</a> </div>
+							</li>
+							<li class="clearfix">
+								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb6.jpg" alt="#"></a>
+								<h3><a href="single_post.html">Paul Thomson on post with SoundCloud</a></h3>
+								<div class="meta mb"> 6 days ago  /  <a href="single_post.html">5 comments</a> </div>
+							</li>
+						</ul>
+					</div><!-- /widget -->
+				</div><!-- /grid3 -->
+
+				<div class="grid_3">
+					<div class="widget">
+						<div class="title"><h4>Best Reviews</h4></div>
+						<ul class="small_posts">
+							<li class="clearfix">
+								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb13.jpg" alt="#"></a>
+								<h3><a href="single_post.html">What is the worst could be the worst?</a></h3>
+								<div class="meta mb"> <a class="cat color1" href="#" title="View all posts under Entertainment">Entertainment</a><span class="post_rating" href="#" title="Rating">8.89</span> </div>
+							</li>
+							<li class="clearfix">
+								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb12.jpg" alt="#"></a>
+								<h3><a href="single_post.html">Praesent ipsum adipiscing mi eget ipsum</a></h3>
+								<div class="meta mb"> <a class="cat color3" href="#" title="View all posts under News">News</a><span class="post_rating" href="#" title="Rating">8.1</span> </div>
+							</li>
+							<li class="clearfix">
+								<a class="s_thumb float-shadow" href="single_post.html"><img width="70" height="70" src="images/assets/thumb11.jpg" alt="#"></a>
+								<h3><a href="single_post.html">Paul Thomson on post with SoundCloud</a></h3>
+								<div class="meta mb"> <a class="cat color4" href="#" title="View all posts under Sports">Sports</a><span class="post_rating" href="#" title="Rating">7.95</span> </div>
+							</li>
+						</ul>
+					</div><!-- /widget -->
+				</div><!-- /grid3 -->
+
+				<div class="grid_3">
+					<div class="widget">
+						<div class="title"><h4>Newsletters</h4></div>
+						<p> To receive the latest updates and Latest Posts enter your email. </p>
+						<form id="newsletters" method="post" action="http://feedburner.google.com/fb/a/mailverify" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=sevenpsd', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+							<input type="email" onfocus="if (this.value=='Type Your Email') this.value = '';" onblur="if (this.value=='') this.value = 'Type Your Email';" value="Type Your Email" placeholder="Type Your Email" required="required">
+							<button type="submit"><i class="icon-checkmark"></i></button>
+						</form>
+					</div><!-- /widget -->
+
+					<div class="widget">
+						<div class="title"><h4>Follow us</h4></div>
+						<div class="social">
+							<a href="#" class="toptip" title="Twitter"><i class="fa-twitter"></i></a>
+							<a href="#" class="toptip" title="Facebook"><i class="fa-facebook"></i></a>
+							<a href="#" class="toptip" title="Google Plus"><i class="fa-google-plus"></i></a>
+							<a href="#" class="toptip" title="Linkedin"><i class="fa-linkedin"></i></a>
+							<a href="#" class="toptip" title="Github"><i class="fa-github"></i></a>
+							<a href="#" class="toptip" title="instagram"><i class="fa-instagram"></i></a>
+							<a href="#" class="toptip" title="Dribbble"><i class="fa-dribbble"></i></a>
+						</div><!-- /social -->
+					</div><!-- /widget -->
+				</div><!-- /grid3 -->
+
+			</div><!-- /row -->
+
+			<div class="row clearfix">
+				<div class="footer_last">
+					<span class="copyright">© 2020 <a href=""></a>. All Rights Reserved. Powered by <a href="">Middle East Oil</a>.</span>
+
+					<div id="toTop" class="toptip" title="Back to Top"><i class="icon-arrow-thin-up"></i></div>
+				</div><!-- /last footer -->
+			</div><!-- /row -->
+
+		</footer><!-- /footer -->
+
+	</div><!-- /layout -->
+
+	<!-- Scripts -->
+		<script type="text/javascript" src="{% static 'js/jquery.min.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/ipress.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/owl.carousel.min.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery.ticker.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/custom.js'%}"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			function date_time(id){
+				date = new Date;
+				year = date.getFullYear();
+				month = date.getMonth();
+				months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+				d = date.getDate();
+				day = date.getDay();
+				days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+				h = date.getHours();
+				if(h<10){
+					h = "0"+h;}
+					m = date.getMinutes();
+					if(m<10){
+						m = "0"+m;
+					}
+					s = date.getSeconds();
+					if(s<10){
+						s = "0"+s;
+					}
+				// result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m+':'+s;
+				result = ''+days[day]+' '+d+' '+months[month]+' '+year;
+				document.getElementById(id).innerHTML = result;
+				setTimeout('date_time("'+id+'");','1000');
+				return true;
+			}
+			window.onload = date_time('date_time');
+		/* ]]> */
+		</script>
+
+
+    <script src="{% static 'node9/js/js_PNwjDNkjBk5p-bNp6h2tUNtBAuT2CZ0HmC4WevZInmw.js'%}"></script>
+
+</body>
+</html>

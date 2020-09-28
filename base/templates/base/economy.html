@@ -108,7 +108,7 @@
 
 											<li class="color6"><a href="{% url 'meo'%}">MEO Channel </a></li>
 
-												<li class="color6"><a href="www.middleeastoil.net/ar">AR/EN </a></li>
+												<li class="color6"><a href="{% url 'arobic:arindex' %}">EN/AR </a></li>
 
 										</ul><!-- /menu -->
 
@@ -146,8 +146,8 @@
 							<div class="grid_6 omega">
 								<div class="post_day_content">
 									<h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
-									<div class="meta mb"> {{post.date_posted}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
-									<p> {{post.content|truncatewords:30|safe}} </p>
+									<div class="meta mb"> {{post.date_posted| date:"F d Y"}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
+									<p> {{ post.content|safe|truncatewords_html:9 }} </p>
 								</div><!-- /post content -->
 							</div><!-- /grid6 omega -->
 
@@ -184,7 +184,7 @@
 						</div><!-- widget -->
 
 						<div class="widget">
-							
+
 
 
 

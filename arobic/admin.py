@@ -14,7 +14,3 @@ class PostAdmin(SummernoteModelAdmin):
 admin.site.register(LatestPost,PostAdmin)
 
 admin.site.register(MEOCHANNEL)
-
-admin.site.site_title = "Middle East OIL"
-admin.site.site_header = "Middle East OIL"
-admin.site.index_title = "Middle East OIL"

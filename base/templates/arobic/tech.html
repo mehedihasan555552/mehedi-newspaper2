@@ -17,6 +17,8 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/styles/responsive.css'%}" media="screen" />
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
 
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styles/rtl.css'%}" media="screen" />
+
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="{% static 'images/favicon.ico'%}">
 	<link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png'%}">
@@ -31,31 +33,44 @@
 		<header id="header">
 			<div class="a_head">
 				<div class="row clearfix">
-					<div class="breaking_news lefter">
+					<div class="breaking_news righter">
 						<div class="freq_out">
 							<div class="freq"><div class="inner_f"></div><div id="layerBall"></div></div>
 						</div><!-- /freq -->
-						<ul id="js-news" class="js-hidden">
+            {% for post in posts %}
+
+
+						<ul id="js-news-rtl" class="js-hidden">
+
+                <li><a href="">{{post.title}}</a></li>
 
 						</ul><!-- /js news -->
+
+              {% endfor %}
 					</div><!-- /breaking news -->
 
 					<div class="right_bar">
 						<div class="lang">
 
+							<div class="more_lang">
+
+							</div><!-- /more lang -->
 						</div><!-- /lang -->
 
 						<div class="social social_head">
-							<a class="random_post bottomtip" href="www.facebook.com/middleeastoil.net" title=""><i class="fa fa-facebook"></i></a>
-								<a class="random_post bottomtip" href="https://www.youtube.com/channel/UCg6PYIAN4wTuuhNn_y4yMvQ" title=""><i class="fa fa-youtube"></i></a>
-									<a class="random_post bottomtip" href="https://twitter.com/middleeastoil" title=""><i class="fa fa-twitter"></i></a>
-										<a class="random_post bottomtip" href="www.rss.com" title=""><i class="fa fa-rss"></i></a>
+							<a href="https://twitter.com/middleeastoil" class="bottomtip" title="Twitter"><i class="fa-twitter"></i></a>
+							<a href="https://www.facebook.com/middleeastoil.net" class="bottomtip" title="Facebook"><i class="fa-facebook"></i></a>
+							<a href="https://www.youtube.com/channel/UCg6PYIAN4wTuuhNn_y4yMvQ" class="bottomtip" title="Google Plus"><i class="fa-youtube"></i></a>
+							<a href="https://www.rss.com" class="bottomtip" title="Linkedin"><i class="fa-rss"></i></a>
+
+
 						</div><!-- /social -->
 
 						<span id="date_time"></span><!-- /date -->
 					</div><!-- /right bar -->
 				</div><!-- /row -->
 			</div><!-- /a head -->
+
 
 			<div class="b_head">
 				<div class="row clearfix">
@@ -70,8 +85,8 @@
 
 						<div class="b_head">
 							<div class="row clearfix">
-								<div class="logo">
-									<a href="{% url 'index' %}" title=""><img src="{% static 'images/logo.png'%}" alt=""></a>
+								<div class="logo" style="float:right">
+									<a href="{% url 'arobic:arindex' %}" title=""><img src="{% static 'images/logo.png'%}" alt=""></a>
 								</div><!-- /logo -->
 
 
@@ -81,72 +96,71 @@
 						<div class="row clearfix">
 							<div class="sticky_true">
 								<div class="c_head clearfix">
-									<nav>
+									<nav >
 										<ul class="sf-menu">
-											<li class="current colordefault home_class"><a href="{% url 'index'%}"><i class="icon-home"></i></a>
+											<li class="current colordefault home_class"><a href="{% url 'arobic:arindex'%}"><i class="icon-home"></i></a>
 
 											</li>
 
-											<li class="color2"><a href="{% url 'gas'%}">GAS&OIL</a>
+											<li class="color2"><a href="{% url 'arobic:argas'%}">GAS&OIL</a>
 												<ul class="col4 mega">
 
 												</ul>
 											</li>
-											<li class="color3"><a href="{% url 'cripto'%}">ECONOMY </a>
+											<li class="color3"><a href="{% url 'arobic:arcripto'%}">ECONOMY </a>
 												<ul class="col4 mega">
 
 												</ul>
 											</li>
-											<li class="color4"><a href="{% url 'enorgy'%}">ENERGY </a>
+											<li class="color4"><a href="{% url 'arobic:arenorgy'%}">ENERGY </a>
 												<ul class="col4 mega">
 
 
 												</ul>
 											</li>
 
-											<li class="color6"><a href="{% url 'tech'%}">Technology</a></li>
+											<li class="color6"><a href="{% url 'arobic:artech'%}">Technology</a></li>
 
-											<li class="color6"><a href="{% url 'meo'%}">MEO Channel </a></li>
+											<li class="color6"><a href="{% url 'arobic:armeo'%}">MEO Channel </a></li>
 
-												<li class="color6"><a href="{% url 'arobic:arindex' %}">EN/AR</a></li>
+												<li class="color6"><a href="{% url 'index'%}">AR/EN </a></li>
 
 										</ul><!-- /menu -->
 
 									</nav><!-- /nav -->
 
 									<div class="right_icons">
-										<a class="random_post bottomtip" href="www.facebook.com/middleeastoil.net" title=""><i class="fa fa-facebook"></i></a>
-											<a class="random_post bottomtip" href="https://www.youtube.com/channel/UCg6PYIAN4wTuuhNn_y4yMvQ" title=""><i class="fa fa-youtube"></i></a>
-												<a class="random_post bottomtip" href="https://twitter.com/middleeastoil" title=""><i class="fa fa-twitter"></i></a>
-													<a class="random_post bottomtip" href="www.rss.com" title=""><i class="fa fa-rss"></i></a>
-									<div class="search">
+										<a class="random_post bottomtip" href="#" title="Random Post"><i class="icon-media-shuffle"></i></a><!-- /random post -->
 
-									<div class="s_form">
+										<div class="search">
 
-									</div>
-									</div>
-									</div>
-									</div>
-									</div>
-									</div>
-									</header>
+											<div class="s_form">
+
+											</div><!-- /s form -->
+										</div><!-- /search -->
+									</div><!-- /right icons -->
+								</div><!-- /c head -->
+							</div><!-- /sticky -->
+						</div><!-- /row -->
+					</header><!-- /header -->
+
 
 		<div class="page-content">
 			<div class="row clearfix">
 				<div class="grid_9 alpha">
 					<div class="grid_8 alpha posts">
-						<div class="title colordefault"><h4>TECHNOLOGY </h4></div>
+						<div class="title colordefault"><h4> TECHNOLOGY </h4></div>
 
 					<!-- post -->
 						{% for post in gass %}
 						<div class="post_day mbf clearfix">
 							<div class="grid_6 alpha relative">
-								<a class="float-shadow" href="{% url 'latestpost' post.id %}"><img style="width:300px;height:170px;" src="{{post.post_pic.url}}" alt=""></a>
+								<a class="float-shadow" href="{% url 'arobic:arlatestpost' post.id %}"><img style="width:300px;height:170px;" src="{{post.post_pic.url}}" alt=""></a>
 							</div><!-- /grid6 alpha -->
 							<div class="grid_6 omega">
 								<div class="post_day_content">
-									<h3> <a href="{% url 'latestpost' post.id %}">{{post.title}}</a> </h3>
-									<div class="meta mb"> {{post.date_posted| date:"F d Y"}}   <a href="{% url 'latestpost' post.id %}"></a> </div>
+									<h3> <a href="{% url 'arobic:arlatestpost' post.id %}">{{post.title}}</a> </h3>
+									<div class="meta mb"> {{post.date_posted| date:"F d Y"}}   <a href="{% url 'arobic:arlatestpost' post.id %}"></a> </div>
 									<p> {{ post.content|safe|truncatewords_html:9 }} </p>
 								</div><!-- /post content -->
 							</div><!-- /grid6 omega -->
@@ -158,14 +172,14 @@
 
 
 
-					<div class="pagination-tt clearfix">
-						<ul>
-							<li><span>1</span></li>
-							<li><a href="#">2</a></li>
+						<div class="pagination-tt clearfix">
+							<ul>
+								<li><span>1</span></li>
+								<li><a href="#">2</a></li>
 
-						</ul>
+							</ul>
 
-					</div><!-- /pagination -->
+						</div><!-- /pagination -->
 
 					</div><!-- end grid9 -->
 
@@ -175,7 +189,7 @@
 							{% for post in video %}
 							{% video post.video '100% x 50%' %}
                {% endfor %}
-						 </div><!-- widget -->
+						</div><!-- widget -->
 
 						<div class="widget">
 							<div class="title"><h4>twitter</h4></div>
@@ -202,32 +216,16 @@
 				<div class="grid_3 omega sidebar sidebar_a">
 
 
-					<div class="widget">
-						<div class="ads_widget clearfix">
-							<a href="#"><img src="images/ads2.jpg" alt="#"></a>
-							<a href="#" class="lefter mt"><img src="images/ads3.jpg" alt="#"></a>
-							<a href="#" class="righter mt"><img src="images/ads3.jpg" alt="#"></a>
-						</div><!-- widget -->
-					</div><!-- widget -->
+
 
 					<div class="widget">
 
 
 							<div class="small_slider_hots owl-carousel owl-theme">
-								<div class="item clearfix">
 
-								</div>
-								<div class="item clearfix">
-
-								</div>
-							</div><!-- /slides -->
 					</div><!-- /widget -->
 
-					<div class="widget">
-						<div class="latest_tweets">
 
-						</div><!-- /latest tweets -->
-					</div><!-- /widget -->
 
 					<div class="widget">
 						<div class="title"><h4>MiddleEastOil Stocks</h4></div>
@@ -381,6 +379,7 @@ Email:	<a href="contact.html">MiddleEastOil@gmail.com</a> </p>
 			window.onload = date_time('date_time');
 		/* ]]> */
 		</script>
+
 		<script src="{% static 'node9/js/js_PNwjDNkjBk5p-bNp6h2tUNtBAuT2CZ0HmC4WevZInmw.js'%}"></script>
 </body>
 </html>
